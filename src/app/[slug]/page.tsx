@@ -99,10 +99,6 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                     <button className="btn btn-accent">Solicitar Dossier</button>
                     <a href="tel:+34912345678" className="btn btn-outline">+34 912 345 678</a>
                 </div>
-                <p className="brochure-cta-link">
-                    Ficha original en{' '}
-                    <a href={property.originalUrl} target="_blank" rel="noopener noreferrer">vivla.com</a>
-                </p>
             </div>
 
         </div>

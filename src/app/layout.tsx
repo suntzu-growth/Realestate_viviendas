@@ -69,23 +69,23 @@ export default function RootLayout({
                     SUNTZU <span className="italic font-light text-[var(--accent)]">Real Estate</span>
                   </span>
                 </div>
-                <p className="text-white/40 text-sm leading-relaxed max-w-xs font-light">
+                <p className="footer-muted text-sm leading-relaxed max-w-xs font-light">
                   Curando las propiedades más excepcionales en las ubicaciones más prestigiosas de la costa española y Madrid.
                 </p>
                 {/* Decorative line */}
                 <div className="mt-10 flex gap-3 items-center">
                   <div className="w-8 h-px bg-[var(--accent)]"></div>
-                  <span className="text-[0.6rem] font-bold tracking-[0.3em] uppercase text-white/20">Est. 2024</span>
+                  <span className="footer-subtle text-[0.6rem] font-bold tracking-[0.3em] uppercase">Est. 2024</span>
                 </div>
               </div>
 
               {/* Nav */}
               <div className="md:col-span-3 md:col-start-7">
-                <h4 className="text-[0.6rem] font-bold tracking-[0.3em] uppercase text-white/30 mb-8">Navegación</h4>
+                <h4 className="footer-muted text-[0.6rem] font-bold tracking-[0.3em] uppercase mb-8">Navegación</h4>
                 <ul className="space-y-5">
                   {['Catálogo Completo', 'Menorca Selection', 'Ibiza Luxury', 'Madrid Prime'].map((item) => (
                     <li key={item}>
-                      <a href="#" className="text-[0.7rem] font-medium tracking-wider uppercase text-white/50 hover:text-[var(--accent)] transition-colors duration-300">
+                      <a href="#" className="footer-link text-[0.7rem] font-medium tracking-wider uppercase">
                         {item}
                       </a>
                     </li>
@@ -95,28 +95,28 @@ export default function RootLayout({
 
               {/* Contact */}
               <div className="md:col-span-3">
-                <h4 className="text-[0.6rem] font-bold tracking-[0.3em] uppercase text-white/30 mb-8">Contacto</h4>
+                <h4 className="footer-muted text-[0.6rem] font-bold tracking-[0.3em] uppercase mb-8">Contacto</h4>
                 <div className="space-y-4">
-                  <a href="mailto:info@suntzu.re" className="block text-sm text-white/50 hover:text-[var(--accent)] transition-colors duration-300 font-light">
+                  <a href="mailto:info@suntzu.re" className="footer-link block text-sm font-light">
                     info@suntzu.re
                   </a>
-                  <a href="tel:+34912345678" className="block text-sm text-white/50 hover:text-[var(--accent)] transition-colors duration-300 font-light">
+                  <a href="tel:+34912345678" className="footer-link block text-sm font-light">
                     +34 912 345 678
                   </a>
-                  <p className="text-sm text-white/30 font-light pt-2">Madrid, España</p>
+                  <p className="footer-muted text-sm font-light pt-2">Madrid, España</p>
                 </div>
               </div>
             </div>
 
             {/* Bottom bar */}
             <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-[0.6rem] text-white/20 font-semibold tracking-[0.2em] uppercase">
+              <p className="footer-subtle text-[0.6rem] font-semibold tracking-[0.2em] uppercase">
                 © 2026 SunTzu Real Estate · Todos los derechos reservados
               </p>
-              <div className="flex gap-8 text-[0.6rem] font-semibold tracking-[0.2em] uppercase text-white/20">
-                <a href="#" className="hover:text-white/50 transition-colors">Privacidad</a>
-                <a href="#" className="hover:text-white/50 transition-colors">Legal</a>
-                <a href="#" className="hover:text-white/50 transition-colors">Cookies</a>
+              <div className="flex gap-8 text-[0.6rem] font-semibold tracking-[0.2em] uppercase">
+                <a href="#" className="footer-link">Privacidad</a>
+                <a href="#" className="footer-link">Legal</a>
+                <a href="#" className="footer-link">Cookies</a>
               </div>
             </div>
           </div>

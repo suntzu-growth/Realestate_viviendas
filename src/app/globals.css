@@ -251,6 +251,28 @@ a {
   text-decoration: none;
 }
 
+/* ── Footer text colors (Tailwind v4 compatibility) ── */
+footer {
+  color: white;
+}
+
+footer .footer-muted {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+footer .footer-subtle {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+footer a.footer-link {
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.3s;
+}
+
+footer a.footer-link:hover {
+  color: var(--accent);
+}
+
 /* ── Price display ── */
 .price-display {
   font-family: 'Cormorant Garamond', serif;

@@ -18,7 +18,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                     key={activeImage}
                     src={images[activeImage]}
                     alt={`Imagen ${activeImage + 1}`}
-                    className="w-full h-full object-cover animate-fade-in"
+                    className="w-full h-full object-cover"
                 />
 
                 <div className="absolute inset-x-0 bottom-10 flex justify-center">
