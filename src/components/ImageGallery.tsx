@@ -7,59 +7,93 @@ interface ImageGalleryProps {
 }
 
 export default function ImageGallery({ images }: ImageGalleryProps) {
-    const [activeImage, setActiveImage] = useState(0);
+    const [active, setActive] = useState(0);
 
     if (!images || images.length === 0) return null;
 
+    const prev = () => setActive(i => (i > 0 ? i - 1 : images.length - 1));
+    const next = () => setActive(i => (i < images.length - 1 ? i + 1 : 0));
+
     return (
-        <div className="space-y-8">
-            <div className="aspect-[16/9] relative overflow-hidden bg-gray-50 group">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+
+            {/* ── Imagen principal ── */}
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: '#f0ede8' }}>
                 <img
-                    key={activeImage}
-                    src={images[activeImage]}
-                    alt={`Imagen ${activeImage + 1}`}
-                    className="w-full h-full object-cover"
+                    src={images[active]}
+                    alt={`Imagen ${active + 1}`}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
 
-                <div className="absolute inset-x-0 bottom-10 flex justify-center">
-                    <div className="bg-black/20 backdrop-blur-xl px-6 py-3 rounded-full text-white text-[11px] font-bold tracking-[0.3em] flex gap-4 border border-white/20">
-                        <span className="opacity-60">{activeImage + 1}</span>
-                        <span className="w-px h-3 bg-white/20"></span>
-                        <span>{images.length}</span>
-                    </div>
-                </div>
+                {/* Flechas */}
+                {images.length > 1 && (
+                    <>
+                        <button onClick={prev} aria-label="Anterior" style={{
+                            position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)',
+                            width: '2.5rem', height: '2.5rem', borderRadius: '50%',
+                            background: 'rgba(0,0,0,0.45)', border: 'none', cursor: 'pointer',
+                            color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            backdropFilter: 'blur(4px)',
+                        }}>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                        </button>
+                        <button onClick={next} aria-label="Siguiente" style={{
+                            position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)',
+                            width: '2.5rem', height: '2.5rem', borderRadius: '50%',
+                            background: 'rgba(0,0,0,0.45)', border: 'none', cursor: 'pointer',
+                            color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            backdropFilter: 'blur(4px)',
+                        }}>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </>
+                )}
 
-                {/* Navigation arrows */}
-                <button
-                    onClick={() => setActiveImage((prev) => (prev > 0 ? prev - 1 : images.length - 1))}
-                    className="absolute left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all opacity-0 group-hover:opacity-100"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </button>
-                <button
-                    onClick={() => setActiveImage((prev) => (prev < images.length - 1 ? prev + 1 : 0))}
-                    className="absolute right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-primary transition-all opacity-0 group-hover:opacity-100"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </button>
+                {/* Contador */}
+                <div style={{
+                    position: 'absolute', bottom: '1rem', right: '1rem',
+                    background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(6px)',
+                    color: 'white', fontSize: '0.65rem', fontWeight: '600',
+                    letterSpacing: '0.15em', padding: '0.35rem 0.75rem',
+                    borderRadius: '2rem',
+                }}>
+                    {active + 1} / {images.length}
+                </div>
             </div>
 
+            {/* ── Miniaturas ── */}
             {images.length > 1 && (
-                <div className="flex justify-center gap-4 overflow-x-auto pb-6 no-scrollbar">
-                    {images.map((img, index) => (
+                <div style={{
+                    display: 'flex', flexDirection: 'row', gap: '0.5rem',
+                    overflowX: 'auto', paddingBottom: '0.25rem',
+                    scrollbarWidth: 'none',
+                }}>
+                    {images.map((img, i) => (
                         <button
-                            key={index}
-                            onClick={() => setActiveImage(index)}
-                            className={`flex-shrink-0 w-20 md:w-28 aspect-[3/2] overflow-hidden border-2 transition-all duration-300 ${activeImage === index
-                                ? 'border-[var(--accent)] opacity-100'
-                                : 'border-transparent opacity-40 hover:opacity-80'
-                                }`}
+                            key={i}
+                            onClick={() => setActive(i)}
+                            style={{
+                                flexShrink: 0,
+                                width: '5.5rem',
+                                aspectRatio: '3/2',
+                                overflow: 'hidden',
+                                border: i === active ? '2px solid #b8965a' : '2px solid transparent',
+                                opacity: i === active ? 1 : 0.5,
+                                cursor: 'pointer',
+                                padding: 0,
+                                background: 'none',
+                                transition: 'opacity 0.2s, border-color 0.2s',
+                            }}
                         >
-                            <img src={img} alt={`Miniatura ${index + 1}`} className="w-full h-full object-cover" />
+                            <img
+                                src={img}
+                                alt={`Vista ${i + 1}`}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                            />
                         </button>
                     ))}
                 </div>
