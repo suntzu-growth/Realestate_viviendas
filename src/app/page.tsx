@@ -6,7 +6,7 @@ export default function Home() {
     <div className="pt-[4.5rem]">
 
       {/* ── Hero ── */}
-      <section className="relative h-screen flex items-end bg-[var(--primary)] text-white overflow-hidden">
+      <section className="relative h-screen flex items-center bg-[var(--primary)] text-white overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <img
@@ -15,19 +15,19 @@ export default function Home() {
             className="w-full h-full object-cover opacity-45 scale-105"
             style={{ transition: 'transform 12s ease-out', transform: 'scale(1)' }}
           />
-          {/* Gradient: stronger at bottom for text legibility, subtle vignette */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent"></div>
+          {/* Gradient overlays for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
         </div>
 
         {/* Decorative top label */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
         {/* Content */}
-        <div className="container relative z-10 pb-20 md:pb-28">
+        <div className="container relative z-10 py-20">
           <div className="max-w-5xl">
             {/* Eyebrow */}
-            <div className="animate-fade-in flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-8">
               <div className="w-8 h-px bg-[var(--accent)]"></div>
               <span className="text-[0.65rem] font-semibold tracking-[0.45em] uppercase text-[var(--accent)]">
                 Exclusive Real Estate · España
@@ -35,7 +35,7 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="animate-fade-in-delay text-[3.5rem] sm:text-[5rem] md:text-[7.5rem] font-serif font-semibold leading-[0.88] tracking-[-0.02em] mb-10">
+            <h1 className="text-[3rem] sm:text-[4.5rem] md:text-[6rem] font-serif font-semibold leading-[0.9] tracking-[-0.02em] mb-10" style={{ textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
               El arte de vivir<br />
               en el{' '}
               <em className="italic font-light" style={{ color: 'var(--accent)' }}>
@@ -44,15 +44,15 @@ export default function Home() {
             </h1>
 
             {/* Subhead + CTA row */}
-            <div className="animate-fade-in-delay-2 flex flex-col md:flex-row md:items-end gap-10 md:gap-20">
-              <p className="text-base text-white/55 max-w-md font-light leading-relaxed">
+            <div className="flex flex-col md:flex-row md:items-end gap-10 md:gap-20">
+              <p className="text-base text-white/70 max-w-md font-light leading-relaxed">
                 Curamos las propiedades más excepcionales en las ubicaciones más prestigiosas de España para quienes buscan algo verdaderamente extraordinario.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 shrink-0">
-                <a href="#catalog" className="btn btn-accent px-10 py-4">
+              <div className="flex flex-row gap-4 shrink-0">
+                <a href="#catalog" className="btn btn-accent px-8 py-3.5">
                   Ver Colección
                 </a>
-                <a href="#" className="btn btn-outline-white px-10 py-4">
+                <a href="#" className="btn btn-outline-white px-8 py-3.5">
                   Contactar
                 </a>
               </div>
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
 
           {/* Stats row */}
-          <div className="animate-fade-in-delay-2 mt-16 pt-10 border-t border-white/10 grid grid-cols-3 gap-8 max-w-lg">
+          <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-3 gap-8 max-w-lg">
             {[
               { value: `${propertiesData.length}`, label: 'Propiedades' },
               { value: '4', label: 'Destinos' },
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
 
           {/* Property grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+          <div className="property-grid">
             {propertiesData.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
@@ -116,7 +116,7 @@ export default function Home() {
       {/* ── Philosophy ── */}
       <section className="section-padding bg-white border-t border-[var(--border-light)]">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div className="philosophy-grid">
             {/* Image */}
             <div className="relative order-2 md:order-1">
               <div className="aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl shadow-black/10">
