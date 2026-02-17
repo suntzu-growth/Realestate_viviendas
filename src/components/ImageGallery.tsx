@@ -13,7 +13,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 
     return (
         <div className="space-y-8">
-            <div className="aspect-[21/9] md:aspect-[21/8] relative rounded-[3rem] overflow-hidden bg-gray-50 shadow-2xl shadow-gray-200/50 group">
+            <div className="aspect-[16/9] relative overflow-hidden bg-gray-50 group">
                 <img
                     key={activeImage}
                     src={images[activeImage]}
@@ -54,9 +54,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                         <button
                             key={index}
                             onClick={() => setActiveImage(index)}
-                            className={`flex-shrink-0 w-24 md:w-32 aspect-[3/2] rounded-2xl overflow-hidden border-2 transition-all duration-700 ${activeImage === index
-                                ? 'border-accent scale-105 shadow-xl shadow-accent/10'
-                                : 'border-transparent opacity-30 hover:opacity-100'
+                            className={`flex-shrink-0 w-20 md:w-28 aspect-[3/2] overflow-hidden border-2 transition-all duration-300 ${activeImage === index
+                                ? 'border-[var(--accent)] opacity-100'
+                                : 'border-transparent opacity-40 hover:opacity-80'
                                 }`}
                         >
                             <img src={img} alt={`Miniatura ${index + 1}`} className="w-full h-full object-cover" />

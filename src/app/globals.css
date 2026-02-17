@@ -286,3 +286,224 @@ a {
     align-items: center;
   }
 }
+
+/* ════════════════════════════════
+   BROCHURE — Property Detail Page
+   ════════════════════════════════ */
+
+.brochure-page {
+  padding-top: 4.5rem;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* Header */
+.brochure-header {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 2.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.brochure-back {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.brochure-back:hover { color: var(--accent); }
+
+.brochure-ref {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.brochure-ref::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.brochure-title {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+
+.brochure-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+.brochure-price span {
+  font-size: 0.6em;
+  color: var(--text-subtle);
+  margin-left: 0.25rem;
+}
+
+/* Gallery */
+.brochure-gallery {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+/* Specs */
+.brochure-specs-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brochure-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--border-light);
+  margin: 2.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .brochure-specs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.brochure-spec-item {
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  border-right: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+.brochure-spec-item:last-child { border-right: none; }
+
+@media (min-width: 640px) {
+  .brochure-spec-item:nth-child(4n) { border-right: none; }
+  .brochure-spec-item:nth-last-child(-n+4) { border-bottom: none; }
+}
+
+.brochure-spec-label {
+  display: block;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.brochure-spec-value {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* Sections */
+.brochure-section,
+.brochure-unique {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.brochure-section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.brochure-line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.brochure-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* Unique quote */
+.brochure-unique {
+  background: var(--accent-light);
+  border-top: none;
+}
+
+.brochure-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 1.4;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--accent);
+  margin: 0;
+}
+
+/* CTA */
+.brochure-cta {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  text-align: center;
+}
+
+.brochure-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.brochure-cta-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.brochure-cta-link {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  font-weight: 300;
+}
+.brochure-cta-link a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.brochure-cta-link a:hover { color: var(--accent); }
