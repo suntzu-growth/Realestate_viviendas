@@ -24,8 +24,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
     const price = property.specs.find(s => s.includes('Precio'))?.replace('Precio: ', '') || 'Consultar';
 
-    // Group specs into pairs
-    const groupedSpecs = [];
+    const groupedSpecs: { value: string; label: string }[] = [];
     const rawSpecs = property.specs.filter(s => !s.includes('Precio'));
     for (let i = 0; i < rawSpecs.length; i += 2) {
         if (isNaN(Number(rawSpecs[i]))) {
@@ -42,98 +41,152 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
     const location = sections.find((_, i) => sections[i - 1] === 'Ubicación:')?.trim();
 
     return (
-        <div className="bg-white min-h-screen">
-            {/* 1. Title Section */}
-            <div className="pt-16 pb-12">
-                <div className="container max-w-4xl text-center">
-                    <span className="bg-accent/10 text-accent text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-[0.2em] mb-6 inline-block">
-                        REF: #{property.id}
-                    </span>
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold text-gray-900 mb-6 tracking-tight leading-tight">
-                        {property.title}
-                    </h1>
-                    <div className="flex items-center justify-center gap-3">
-                        <span className="text-4xl font-serif font-bold text-primary">{price}</span>
-                        <span className="text-xl text-gray-400">€</span>
+        <div className="bg-[var(--bg)] min-h-screen">
+
+            {/* ── Title Section ── */}
+            <div className="pt-[4.5rem] pb-0">
+                <div className="container pt-16 pb-12">
+                    <div className="max-w-3xl">
+                        {/* Breadcrumb */}
+                        <div className="flex items-center gap-3 mb-8">
+                            <a href="/" className="text-[0.6rem] font-semibold tracking-[0.25em] uppercase text-[var(--text-subtle)] hover:text-[var(--accent)] transition-colors">
+                                Catálogo
+                            </a>
+                            <span className="text-[var(--border)] text-xs">/</span>
+                            <span className="text-[0.6rem] font-semibold tracking-[0.25em] uppercase text-[var(--text-muted)]">
+                                {property.title}
+                            </span>
+                        </div>
+
+                        {/* Ref badge */}
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-6 h-px bg-[var(--accent)]"></div>
+                            <span className="text-[0.6rem] font-semibold tracking-[0.3em] uppercase text-[var(--accent)]">
+                                Ref #{property.id}
+                            </span>
+                        </div>
+
+                        <h1 className="text-5xl md:text-7xl font-serif font-semibold text-[var(--primary)] mb-6 tracking-tight leading-[0.92]">
+                            {property.title}
+                        </h1>
+
+                        <div className="flex items-baseline gap-2 mt-6">
+                            <span className="price-display text-4xl md:text-5xl font-light text-[var(--primary)] tracking-tight">
+                                {price}
+                            </span>
+                            <span className="text-xl text-[var(--text-subtle)] font-light">€</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* 2. Carousel Section */}
+            {/* ── Gallery ── */}
             <div className="mb-20">
                 <div className="container">
                     <ImageGallery images={property.images} />
                 </div>
             </div>
 
-            <div className="container max-w-4xl">
-                {/* 3. Main Characteristics Section */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-t border-b border-gray-100 mb-20 bg-gray-50/50 rounded-[2.5rem] px-8 md:px-12">
-                    {groupedSpecs.map((spec, i) => (
-                        <div key={i} className="text-center">
-                            <span className="block text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-2">
-                                {spec.label}
-                            </span>
-                            <span className="text-2xl md:text-3xl font-serif font-bold text-gray-800">
-                                {spec.value}
-                            </span>
-                        </div>
-                    ))}
-                </div>
+            {/* ── Main content ── */}
+            <div className="container">
+                <div className="max-w-3xl mx-auto">
 
-                {/* 4. Description Section */}
-                <div className="mb-20">
-                    <h2 className="text-sm uppercase tracking-[0.3em] text-accent font-bold mb-8 flex items-center gap-4">
-                        <span className="w-12 h-px bg-accent"></span>
-                        Descripción
-                    </h2>
-                    <div className="prose prose-xl max-w-none text-gray-600 leading-relaxed font-light">
-                        {description}
+                    {/* Specs grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-10 mb-20 border-t border-b border-[var(--border-light)]">
+                        {groupedSpecs.map((spec, i) => (
+                            <div key={i} className="text-center px-4">
+                                <span className="block text-[0.58rem] text-[var(--text-subtle)] uppercase tracking-[0.25em] font-semibold mb-2.5">
+                                    {spec.label}
+                                </span>
+                                <span className="price-display text-3xl font-light text-[var(--primary)]">
+                                    {spec.value}
+                                </span>
+                            </div>
+                        ))}
                     </div>
-                </div>
 
-                {/* 5. Unique Features Section */}
-                {unique && (
+                    {/* Description */}
                     <div className="mb-20">
-                        <h2 className="text-sm uppercase tracking-[0.3em] text-accent font-bold mb-10 flex items-center gap-4">
-                            <span className="w-12 h-px bg-accent"></span>
-                            ¿Por qué es única?
-                        </h2>
-                        <div className="bg-accent-light/30 rounded-[2.5rem] p-10 md:p-16 border border-accent/10">
-                            <p className="text-2xl md:text-3xl font-serif italic text-gray-800 leading-snug">
-                                "{unique}"
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="w-8 h-px bg-[var(--accent)]"></div>
+                            <h2 className="text-[0.65rem] font-semibold tracking-[0.35em] uppercase text-[var(--accent)]">
+                                Descripción
+                            </h2>
+                        </div>
+                        <div className="text-lg text-[var(--text-muted)] leading-relaxed font-light">
+                            {description}
+                        </div>
+                    </div>
+
+                    {/* Unique features */}
+                    {unique && (
+                        <div className="mb-20">
+                            <div className="flex items-center gap-4 mb-10">
+                                <div className="w-8 h-px bg-[var(--accent)]"></div>
+                                <h2 className="text-[0.65rem] font-semibold tracking-[0.35em] uppercase text-[var(--accent)]">
+                                    ¿Por qué es única?
+                                </h2>
+                            </div>
+                            <div className="relative">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)] opacity-40"></div>
+                                <div className="pl-8">
+                                    <p className="text-2xl md:text-3xl font-serif italic font-light text-[var(--primary)] leading-snug">
+                                        "{unique}"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Location */}
+                    {location && (
+                        <div className="mb-24">
+                            <div className="flex items-center gap-4 mb-8">
+                                <div className="w-8 h-px bg-[var(--accent)]"></div>
+                                <h2 className="text-[0.65rem] font-semibold tracking-[0.35em] uppercase text-[var(--accent)]">
+                                    Localización
+                                </h2>
+                            </div>
+                            <div className="text-lg text-[var(--text-muted)] leading-relaxed font-light">
+                                {location}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* CTA */}
+                    <div className="pb-32 pt-16 border-t border-[var(--border-light)]">
+                        <div className="text-center mb-12">
+                            <div className="flex items-center justify-center gap-4 mb-6">
+                                <div className="w-8 h-px bg-[var(--accent)]"></div>
+                                <span className="text-[0.65rem] font-semibold tracking-[0.35em] uppercase text-[var(--accent)]">Interesado</span>
+                                <div className="w-8 h-px bg-[var(--accent)]"></div>
+                            </div>
+                            <h3 className="text-3xl md:text-4xl font-serif font-semibold text-[var(--primary)] mb-4 tracking-tight">
+                                ¿Te interesa esta propiedad?
+                            </h3>
+                            <p className="text-[var(--text-muted)] text-sm font-light max-w-sm mx-auto">
+                                Contacta con nosotros para recibir información detallada o concertar una visita.
                             </p>
                         </div>
-                    </div>
-                )}
 
-                {/* 6. Location Section */}
-                {location && (
-                    <div className="mb-24">
-                        <h2 className="text-sm uppercase tracking-[0.3em] text-accent font-bold mb-8 flex items-center gap-4">
-                            <span className="w-12 h-px bg-accent"></span>
-                            Localización
-                        </h2>
-                        <div className="text-xl text-gray-600 leading-relaxed font-light">
-                            {location}
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <button className="btn btn-accent px-12 py-4">
+                                Solicitar Dossier
+                            </button>
+                            <a href="tel:+34912345678" className="btn btn-outline px-12 py-4">
+                                +34 912 345 678
+                            </a>
                         </div>
-                    </div>
-                )}
 
-                {/* Footer CTA */}
-                <div className="pb-32 text-center border-t border-gray-100 pt-20">
-                    <h3 className="text-3xl font-serif font-bold mb-10">¿Te interesa esta propiedad?</h3>
-                    <div className="flex flex-col sm:flex-row justify-center gap-6">
-                        <button className="btn px-12 py-6 text-xl rounded-2xl shadow-2xl shadow-primary/20">
-                            Solicitar Dossier Completo
-                        </button>
-                        <a href="tel:+34912345678" className="flex items-center justify-center gap-4 px-12 py-6 border-2 border-gray-100 rounded-2xl font-bold text-xl hover:border-accent transition-colors">
-                            <span className="text-accent">Llámanos:</span> +34 912 345 678
-                        </a>
+                        <p className="mt-10 text-[var(--text-subtle)] text-xs text-center font-light">
+                            Ficha original en{' '}
+                            <a href={property.originalUrl} target="_blank" rel="noopener noreferrer"
+                               className="underline underline-offset-4 hover:text-[var(--accent)] transition-colors">
+                                vivla.com
+                            </a>
+                        </p>
                     </div>
-                    <p className="mt-10 text-gray-400 text-sm">
-                        O visítanos en <a href={property.originalUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">vivla.com</a>
-                    </p>
+
                 </div>
             </div>
         </div>
