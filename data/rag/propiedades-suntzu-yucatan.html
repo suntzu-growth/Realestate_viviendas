@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Propiedades - Ceiba Prime Realty (Demo Yucatán)</title>
+    <title>Catálogo de Propiedades - Yucatán (RAG)</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 1200px; margin: 0 auto; padding: 20px; }
         .property { margin-bottom: 40px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
         .property h2 { color: #2c3e50; margin-top: 0; }
         .property-meta { color: #7f8c8d; font-size: 0.9em; margin-bottom: 10px; }
+        .property-quick-ref { background: #fff8e1; border-left: 3px solid #f39c12; padding: 8px 15px; margin: 8px 0; font-size: 0.85em; word-break: break-all; }
+        .property-rag-images-index { background: #f0fff4; border-left: 3px solid #27ae60; padding: 10px 15px; margin: 10px 0; font-size: 0.85em; word-break: break-all; }
         .property-images { display: flex; gap: 10px; margin: 15px 0; flex-wrap: wrap; }
         .property-images img { max-width: 300px; height: auto; border-radius: 4px; }
         .property-specs { background: #f8f9fa; padding: 15px; border-radius: 4px; margin: 15px 0; }
@@ -17,18 +19,17 @@
         .property-content { margin: 15px 0; }
         .property-unique { background: #fffbf0; border-left: 3px solid #b8965a; padding: 12px 15px; margin: 15px 0; border-radius: 0 4px 4px 0; }
         .property-location { background: #f0f7ff; border-left: 3px solid #3498db; padding: 12px 15px; margin: 15px 0; border-radius: 0 4px 4px 0; }
-        .property-rag-images-index { background: #f0fff4; border-left: 3px solid #27ae60; padding: 10px 15px; margin: 10px 0; font-size: 0.85em; word-break: break-all; }
         .property-url { display: inline-block; margin-top: 10px; padding: 8px 16px; background: #b8965a; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; }
         .property-url:hover { background: #9a7a45; }
         .summary-box { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
     </style>
 </head>
 <body>
-    <h1>Catálogo de Propiedades - Ceiba Prime Realty (Demo Yucatán)</h1>
+    <h1>Catálogo de Propiedades - Yucatán (RAG)</h1>
 
     <div class="summary-box">
         <p><strong>Total de propiedades:</strong> 58</p>
-        <p><strong>Última actualización:</strong> 2026-02-18T10:47:21.136Z</p>
+        <p><strong>Última actualización:</strong> 2026-02-18T15:48:33.545Z</p>
         <p><strong>Fuente:</strong> https://realestate-viviendas.vercel.app</p>
         <p><strong>Destinos:</strong> Mérida, Progreso, Chicxulub Puerto, Chelem, Telchac Puerto, Sisal, Celestún</p>
     </div>
@@ -95,12 +96,12 @@
     <hr>
 
     <article class="property" id="property-2">
-        <h2>Casa Marea Progreso</h2>
+        <h2>Casa Marea Progreso I</h2>
 
-        <!-- RAG_METADATA: title="Casa Marea Progreso" | url="https://realestate-viviendas.vercel.app/casa-tarida" | slug="casa-tarida" | specs="En construcción | 3 Dormitorios | 2 Baños | 186 m² | Precio: 1.480.000 €" | summary="3 dorm, 2 baños, 186 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3df3_2OJKNLIrdQg_jcfK5Q-njXjoZCKwn95V7xrKQhrLWmQ.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3e43_6Z9bb8maju27wolSYvzS59lecc-bftZl2dUhhkC8y8E.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3dd1_0A1r9iztC4APR1lIyRtfhdVRDwNjMuwve1TTedeUp6I.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Marea Progreso I" | url="https://realestate-viviendas.vercel.app/casa-tarida" | slug="casa-tarida" | specs="En construcción | 3 Dormitorios | 2 Baños | 186 m² | Precio: 1.480.000 €" | summary="3 dorm, 2 baños, 186 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3df3_2OJKNLIrdQg_jcfK5Q-njXjoZCKwn95V7xrKQhrLWmQ.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3e43_6Z9bb8maju27wolSYvzS59lecc-bftZl2dUhhkC8y8E.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3dd1_0A1r9iztC4APR1lIyRtfhdVRDwNjMuwve1TTedeUp6I.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Marea Progreso |
+            <strong>Nombre:</strong> Casa Marea Progreso I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-tarida |
             <strong>Slug:</strong> casa-tarida |
             <strong>Specs:</strong> En construcción | 3 Dormitorios | 2 Baños | 186 m² | Precio: 1.480.000 € |
@@ -119,9 +120,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3df3_2OJKNLIrdQg_jcfK5Q-njXjoZCKwn95V7xrKQhrLWmQ.jpeg" alt="Casa Marea Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3e43_6Z9bb8maju27wolSYvzS59lecc-bftZl2dUhhkC8y8E.jpeg" alt="Casa Marea Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3dd1_0A1r9iztC4APR1lIyRtfhdVRDwNjMuwve1TTedeUp6I.jpeg" alt="Casa Marea Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3df3_2OJKNLIrdQg_jcfK5Q-njXjoZCKwn95V7xrKQhrLWmQ.jpeg" alt="Casa Marea Progreso I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3e43_6Z9bb8maju27wolSYvzS59lecc-bftZl2dUhhkC8y8E.jpeg" alt="Casa Marea Progreso I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68399c76d735954ce43d3dd1_0A1r9iztC4APR1lIyRtfhdVRDwNjMuwve1TTedeUp6I.jpeg" alt="Casa Marea Progreso I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -279,12 +280,12 @@
     <article class="property" id="property-5">
         <h2>Casa Sal Chelem</h2>
 
-        <!-- RAG_METADATA: title="Casa Sal Chelem" | url="https://realestate-viviendas.vercel.app/casa-labara" | slug="casa-labara" | specs="En construcción | 4 Dormitorios | 4 Baños | 215 m² | Precio: 1.320.000 €" | summary="4 dorm, 4 baños, 215 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/686b90af893633d8d586f846_ex2lo02-14eP7uzeZVTZeFVmZZDqpV_v9L09Q6pu1Ls.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/686b90ae893633d8d586f822_zxNvYAAJ4pRNQ-beGxLkMCQ_54ftDzFl-V9AH2G6-8k.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/686b90af893633d8d586f853_ZR5OnW2qRLgTvcaejsyMdL3RlRKsQZYPM_1gj-JFrkw.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Sal Chelem" | url="https://realestate-viviendas.vercel.app/casa-lamedra" | slug="casa-lamedra" | specs="En construcción | 4 Dormitorios | 4 Baños | 215 m² | Precio: 1.320.000 €" | summary="4 dorm, 4 baños, 215 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/686b90af893633d8d586f846_ex2lo02-14eP7uzeZVTZeFVmZZDqpV_v9L09Q6pu1Ls.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/686b90ae893633d8d586f822_zxNvYAAJ4pRNQ-beGxLkMCQ_54ftDzFl-V9AH2G6-8k.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/686b90af893633d8d586f853_ZR5OnW2qRLgTvcaejsyMdL3RlRKsQZYPM_1gj-JFrkw.jpeg" | images_count="3" -->
 
         <div class="property-meta">
             <strong>Nombre:</strong> Casa Sal Chelem |
-            <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-labara |
-            <strong>Slug:</strong> casa-labara |
+            <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-lamedra |
+            <strong>Slug:</strong> casa-lamedra |
             <strong>Specs:</strong> En construcción | 4 Dormitorios | 4 Baños | 215 m² | Precio: 1.320.000 € |
             <strong>Categoría:</strong> inmobiliaria
         </div>
@@ -333,19 +334,19 @@
             <p>Chelem, Yucatán. A pocos minutos de la playa, tienditas y cafeterías locales y restaurantes de mariscos. pueblo costero relajado, perfecto para desconectar. Ideal para vacaciones y escapadas, con ventilación cruzada y espacios para vivir al aire libre.</p>
         </div>
 
-        <a href="https://realestate-viviendas.vercel.app/casa-labara" class="property-url" target="_blank">Ver propiedad →</a>
+        <a href="https://realestate-viviendas.vercel.app/casa-lamedra" class="property-url" target="_blank">Ver propiedad →</a>
     </article>
     <hr>
 
     <article class="property" id="property-6">
         <h2>Casa Horizonte Telchac Puerto</h2>
 
-        <!-- RAG_METADATA: title="Casa Horizonte Telchac Puerto" | url="https://realestate-viviendas.vercel.app/casa-hermosilla" | slug="casa-hermosilla" | specs="3 Dormitorios | 3 Baños | 175 m² | Precio: 3.880.000 €" | summary="3 dorm, 3 baños, 175 m², 3.880.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68a47617ce9f3d11315cff62_tuvWOWrT1JJ3LIrFROC2xFHDMbctuN4A2m71l4ZcPyc.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68a47616ce9f3d11315cff2e_FHdr82BTB73VpK-HUumepEt-OZpW2bJ1Ia2X2XO4Oqo.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68a47616ce9f3d11315cff39_kHb7J7DUFNk0I6el96E_wODi5ttILjS_DDg-ButzDdw.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Horizonte Telchac Puerto" | url="https://realestate-viviendas.vercel.app/casa-recoletos" | slug="casa-recoletos" | specs="3 Dormitorios | 3 Baños | 175 m² | Precio: 3.880.000 €" | summary="3 dorm, 3 baños, 175 m², 3.880.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68a47617ce9f3d11315cff62_tuvWOWrT1JJ3LIrFROC2xFHDMbctuN4A2m71l4ZcPyc.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68a47616ce9f3d11315cff2e_FHdr82BTB73VpK-HUumepEt-OZpW2bJ1Ia2X2XO4Oqo.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68a47616ce9f3d11315cff39_kHb7J7DUFNk0I6el96E_wODi5ttILjS_DDg-ButzDdw.jpeg" | images_count="3" -->
 
         <div class="property-meta">
             <strong>Nombre:</strong> Casa Horizonte Telchac Puerto |
-            <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-hermosilla |
-            <strong>Slug:</strong> casa-hermosilla |
+            <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-recoletos |
+            <strong>Slug:</strong> casa-recoletos |
             <strong>Specs:</strong> 3 Dormitorios | 3 Baños | 175 m² | Precio: 3.880.000 € |
             <strong>Categoría:</strong> inmobiliaria
         </div>
@@ -393,17 +394,17 @@
             <p>Telchac Puerto, Yucatán. A pocos minutos de la playa, tienditas y cafeterías locales y restaurantes de mariscos. playa amplia y calma; sensación de resort discreto. Ideal para vacaciones y escapadas, con ventilación cruzada y espacios para vivir al aire libre.</p>
         </div>
 
-        <a href="https://realestate-viviendas.vercel.app/casa-hermosilla" class="property-url" target="_blank">Ver propiedad →</a>
+        <a href="https://realestate-viviendas.vercel.app/casa-recoletos" class="property-url" target="_blank">Ver propiedad →</a>
     </article>
     <hr>
 
     <article class="property" id="property-7">
-        <h2>Casa Hoyo18 Country</h2>
+        <h2>Casa Hoyo18 Country I</h2>
 
-        <!-- RAG_METADATA: title="Casa Hoyo18 Country" | url="https://realestate-viviendas.vercel.app/casa-nara" | slug="casa-nara" | specs="4 Dormitorios | 4 Baños | 175 m² | Precio: 1.240.000 €" | summary="4 dorm, 4 baños, 175 m², 1.240.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e14_RX0U1xAbDs_ZhMpJ63ExWnwQGJbxF_28ZHN21Pj_Vv0.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e3a_Iq3bw1ra45w3uXOhTZ5jqDXC_pxMuiSoaiDKqYYI1V4.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676dfc_YzrzWcWdu8XJuCDy8RD5i6LZC1cwNauiWqRRCsz9Irw.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Hoyo18 Country I" | url="https://realestate-viviendas.vercel.app/casa-nara" | slug="casa-nara" | specs="4 Dormitorios | 4 Baños | 175 m² | Precio: 1.240.000 €" | summary="4 dorm, 4 baños, 175 m², 1.240.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e14_RX0U1xAbDs_ZhMpJ63ExWnwQGJbxF_28ZHN21Pj_Vv0.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e3a_Iq3bw1ra45w3uXOhTZ5jqDXC_pxMuiSoaiDKqYYI1V4.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676dfc_YzrzWcWdu8XJuCDy8RD5i6LZC1cwNauiWqRRCsz9Irw.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Hoyo18 Country |
+            <strong>Nombre:</strong> Casa Hoyo18 Country I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-nara |
             <strong>Slug:</strong> casa-nara |
             <strong>Specs:</strong> 4 Dormitorios | 4 Baños | 175 m² | Precio: 1.240.000 € |
@@ -422,9 +423,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e14_RX0U1xAbDs_ZhMpJ63ExWnwQGJbxF_28ZHN21Pj_Vv0.jpeg" alt="Casa Hoyo18 Country - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e3a_Iq3bw1ra45w3uXOhTZ5jqDXC_pxMuiSoaiDKqYYI1V4.jpeg" alt="Casa Hoyo18 Country - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676dfc_YzrzWcWdu8XJuCDy8RD5i6LZC1cwNauiWqRRCsz9Irw.jpeg" alt="Casa Hoyo18 Country - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e14_RX0U1xAbDs_ZhMpJ63ExWnwQGJbxF_28ZHN21Pj_Vv0.jpeg" alt="Casa Hoyo18 Country I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676e3a_Iq3bw1ra45w3uXOhTZ5jqDXC_pxMuiSoaiDKqYYI1V4.jpeg" alt="Casa Hoyo18 Country I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68822027d4431e0b16676dfc_YzrzWcWdu8XJuCDy8RD5i6LZC1cwNauiWqRRCsz9Irw.jpeg" alt="Casa Hoyo18 Country I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -458,12 +459,12 @@
     <hr>
 
     <article class="property" id="property-8">
-        <h2>Casa Club Country</h2>
+        <h2>Casa Club Country I</h2>
 
-        <!-- RAG_METADATA: title="Casa Club Country" | url="https://realestate-viviendas.vercel.app/casa-abana" | slug="casa-abana" | specs="En Renovación | 4 Dormitorios | 5 Baños | 349 m² | Precio: 1.480.000 €" | summary="4 dorm, 5 baños, 349 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90845_cAlOZne9chMCr4zJvlvr6EXmGLga-qnqtLyfTi-ZU8s.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90848_mS-KAxFUqPcKb3ioSPc3x4R1Wd2rhuD8TqE05V6cN8g.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90855_aGn2BhFVMzOKhyoc3n96QwOIbihpsF5RGubMRRNNDZ8.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Club Country I" | url="https://realestate-viviendas.vercel.app/casa-abana" | slug="casa-abana" | specs="En Renovación | 4 Dormitorios | 5 Baños | 349 m² | Precio: 1.480.000 €" | summary="4 dorm, 5 baños, 349 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90845_cAlOZne9chMCr4zJvlvr6EXmGLga-qnqtLyfTi-ZU8s.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90848_mS-KAxFUqPcKb3ioSPc3x4R1Wd2rhuD8TqE05V6cN8g.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90855_aGn2BhFVMzOKhyoc3n96QwOIbihpsF5RGubMRRNNDZ8.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Club Country |
+            <strong>Nombre:</strong> Casa Club Country I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-abana |
             <strong>Slug:</strong> casa-abana |
             <strong>Specs:</strong> En Renovación | 4 Dormitorios | 5 Baños | 349 m² | Precio: 1.480.000 € |
@@ -482,9 +483,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90845_cAlOZne9chMCr4zJvlvr6EXmGLga-qnqtLyfTi-ZU8s.jpeg" alt="Casa Club Country - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90848_mS-KAxFUqPcKb3ioSPc3x4R1Wd2rhuD8TqE05V6cN8g.jpeg" alt="Casa Club Country - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90855_aGn2BhFVMzOKhyoc3n96QwOIbihpsF5RGubMRRNNDZ8.jpeg" alt="Casa Club Country - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90845_cAlOZne9chMCr4zJvlvr6EXmGLga-qnqtLyfTi-ZU8s.jpeg" alt="Casa Club Country I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90848_mS-KAxFUqPcKb3ioSPc3x4R1Wd2rhuD8TqE05V6cN8g.jpeg" alt="Casa Club Country I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68809a52ebb5dc6b72c90855_aGn2BhFVMzOKhyoc3n96QwOIbihpsF5RGubMRRNNDZ8.jpeg" alt="Casa Club Country I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -580,12 +581,12 @@
     <hr>
 
     <article class="property" id="property-10">
-        <h2>Casa Concha Sisal</h2>
+        <h2>Casa Concha Sisal I</h2>
 
-        <!-- RAG_METADATA: title="Casa Concha Sisal" | url="https://realestate-viviendas.vercel.app/casa-luma" | slug="casa-luma" | specs="En construcción | 4 Dormitorios | 3 Baños | 274 m² | Precio: 2.480.000 €" | summary="4 dorm, 3 baños, 274 m², 2.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc4a_5Ze1ndFh8bvZDz3Z1Y9dSsS0Q4muYSJ3dVNWSrUqtsE.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc64_vLWub-y5fNhtQvhZb4FVZdlUXXb0HT1PfnK1cIzTOc4.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc6c_1HnqR7M_pQKlqeVuy0BTgiV065MlwagVsxDLNxAZVZs.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Concha Sisal I" | url="https://realestate-viviendas.vercel.app/casa-luma" | slug="casa-luma" | specs="En construcción | 4 Dormitorios | 3 Baños | 274 m² | Precio: 2.480.000 €" | summary="4 dorm, 3 baños, 274 m², 2.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc4a_5Ze1ndFh8bvZDz3Z1Y9dSsS0Q4muYSJ3dVNWSrUqtsE.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc64_vLWub-y5fNhtQvhZb4FVZdlUXXb0HT1PfnK1cIzTOc4.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc6c_1HnqR7M_pQKlqeVuy0BTgiV065MlwagVsxDLNxAZVZs.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Concha Sisal |
+            <strong>Nombre:</strong> Casa Concha Sisal I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-luma |
             <strong>Slug:</strong> casa-luma |
             <strong>Specs:</strong> En construcción | 4 Dormitorios | 3 Baños | 274 m² | Precio: 2.480.000 € |
@@ -604,9 +605,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc4a_5Ze1ndFh8bvZDz3Z1Y9dSsS0Q4muYSJ3dVNWSrUqtsE.jpeg" alt="Casa Concha Sisal - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc64_vLWub-y5fNhtQvhZb4FVZdlUXXb0HT1PfnK1cIzTOc4.jpeg" alt="Casa Concha Sisal - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc6c_1HnqR7M_pQKlqeVuy0BTgiV065MlwagVsxDLNxAZVZs.jpeg" alt="Casa Concha Sisal - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc4a_5Ze1ndFh8bvZDz3Z1Y9dSsS0Q4muYSJ3dVNWSrUqtsE.jpeg" alt="Casa Concha Sisal I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc64_vLWub-y5fNhtQvhZb4FVZdlUXXb0HT1PfnK1cIzTOc4.jpeg" alt="Casa Concha Sisal I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6884e4e554496e0b9666bc6c_1HnqR7M_pQKlqeVuy0BTgiV065MlwagVsxDLNxAZVZs.jpeg" alt="Casa Concha Sisal I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -641,12 +642,12 @@
     <hr>
 
     <article class="property" id="property-11">
-        <h2>Casa Viento Celestún</h2>
+        <h2>Casa Viento Celestún I</h2>
 
-        <!-- RAG_METADATA: title="Casa Viento Celestún" | url="https://realestate-viviendas.vercel.app/casa-wave-poolside" | slug="casa-wave-poolside" | specs="En construcción | 3 Dormitorios | 2 Baños | 117 m² | Precio: 2.160.000 €" | summary="3 dorm, 2 baños, 117 m², 2.160.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f8c_ViktsZPrAvuu3eZ79J7P1kdMlAoDIUBJTWzWGJqo0Tw.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Viento Celestún I" | url="https://realestate-viviendas.vercel.app/casa-wave-poolside" | slug="casa-wave-poolside" | specs="En construcción | 3 Dormitorios | 2 Baños | 117 m² | Precio: 2.160.000 €" | summary="3 dorm, 2 baños, 117 m², 2.160.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f8c_ViktsZPrAvuu3eZ79J7P1kdMlAoDIUBJTWzWGJqo0Tw.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Viento Celestún |
+            <strong>Nombre:</strong> Casa Viento Celestún I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-wave-poolside |
             <strong>Slug:</strong> casa-wave-poolside |
             <strong>Specs:</strong> En construcción | 3 Dormitorios | 2 Baños | 117 m² | Precio: 2.160.000 € |
@@ -665,9 +666,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f8c_ViktsZPrAvuu3eZ79J7P1kdMlAoDIUBJTWzWGJqo0Tw.jpeg" alt="Casa Viento Celestún - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" alt="Casa Viento Celestún - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" alt="Casa Viento Celestún - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f8c_ViktsZPrAvuu3eZ79J7P1kdMlAoDIUBJTWzWGJqo0Tw.jpeg" alt="Casa Viento Celestún I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" alt="Casa Viento Celestún I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" alt="Casa Viento Celestún I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -702,12 +703,12 @@
     <hr>
 
     <article class="property" id="property-12">
-        <h2>Casa Brisa Progreso</h2>
+        <h2>Casa Brisa Progreso I</h2>
 
-        <!-- RAG_METADATA: title="Casa Brisa Progreso" | url="https://realestate-viviendas.vercel.app/casa-wave-seaside" | slug="casa-wave-seaside" | specs="En construcción | 3 Dormitorios | 2 Baños | 120 m² | Precio: 2.040.000 €" | summary="3 dorm, 2 baños, 120 m², 2.040.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16fb5_uUAlMkmO37fGjlhLYj86UFYiawf0wMqjACuVKIjwTKE.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Brisa Progreso I" | url="https://realestate-viviendas.vercel.app/casa-wave-seaside" | slug="casa-wave-seaside" | specs="En construcción | 3 Dormitorios | 2 Baños | 120 m² | Precio: 2.040.000 €" | summary="3 dorm, 2 baños, 120 m², 2.040.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16fb5_uUAlMkmO37fGjlhLYj86UFYiawf0wMqjACuVKIjwTKE.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Brisa Progreso |
+            <strong>Nombre:</strong> Casa Brisa Progreso I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-wave-seaside |
             <strong>Slug:</strong> casa-wave-seaside |
             <strong>Specs:</strong> En construcción | 3 Dormitorios | 2 Baños | 120 m² | Precio: 2.040.000 € |
@@ -726,9 +727,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16fb5_uUAlMkmO37fGjlhLYj86UFYiawf0wMqjACuVKIjwTKE.jpeg" alt="Casa Brisa Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" alt="Casa Brisa Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" alt="Casa Brisa Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16fb5_uUAlMkmO37fGjlhLYj86UFYiawf0wMqjACuVKIjwTKE.jpeg" alt="Casa Brisa Progreso I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9369d2bb6a0d6c16f86_uwxyRwajRSVwbvyu01ZqKgvgM45qhelXB0XvvjXBKLc.jpeg" alt="Casa Brisa Progreso I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880c9379d2bb6a0d6c16f99_G06ntDSAH5gDPpO4-aU2QmEHiRPFyWH0tysU1YA-fj0.jpeg" alt="Casa Brisa Progreso I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -763,12 +764,12 @@
     <hr>
 
     <article class="property" id="property-13">
-        <h2>Casa Arena Chicxulub Puerto</h2>
+        <h2>Casa Arena Chicxulub Puerto I</h2>
 
-        <!-- RAG_METADATA: title="Casa Arena Chicxulub Puerto" | url="https://realestate-viviendas.vercel.app/casa-solaz" | slug="casa-solaz" | specs="En construcción | 4 Dormitorios | 3 Baños | 240 m² | Precio: 1.360.000 €" | summary="4 dorm, 3 baños, 240 m², 1.360.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271ae4_yNz9SAORgjdDSxZxTQRgpVNpXxaBvcTby6vyF-GVJeE.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bba8c47e58ad0399f43c_uFRsfp3Ns3HdvIM4_6NjwkoTtZ_FE_PaEUQXoyj9-Cg.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271af0_ah8LOv5VUDH1J_8lIGVLIiJZsa-i-IN_ye_X6IVA6XU.png" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Arena Chicxulub Puerto I" | url="https://realestate-viviendas.vercel.app/casa-solaz" | slug="casa-solaz" | specs="En construcción | 4 Dormitorios | 3 Baños | 240 m² | Precio: 1.360.000 €" | summary="4 dorm, 3 baños, 240 m², 1.360.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271ae4_yNz9SAORgjdDSxZxTQRgpVNpXxaBvcTby6vyF-GVJeE.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bba8c47e58ad0399f43c_uFRsfp3Ns3HdvIM4_6NjwkoTtZ_FE_PaEUQXoyj9-Cg.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271af0_ah8LOv5VUDH1J_8lIGVLIiJZsa-i-IN_ye_X6IVA6XU.png" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Arena Chicxulub Puerto |
+            <strong>Nombre:</strong> Casa Arena Chicxulub Puerto I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-solaz |
             <strong>Slug:</strong> casa-solaz |
             <strong>Specs:</strong> En construcción | 4 Dormitorios | 3 Baños | 240 m² | Precio: 1.360.000 € |
@@ -787,9 +788,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271ae4_yNz9SAORgjdDSxZxTQRgpVNpXxaBvcTby6vyF-GVJeE.png" alt="Casa Arena Chicxulub Puerto - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bba8c47e58ad0399f43c_uFRsfp3Ns3HdvIM4_6NjwkoTtZ_FE_PaEUQXoyj9-Cg.png" alt="Casa Arena Chicxulub Puerto - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271af0_ah8LOv5VUDH1J_8lIGVLIiJZsa-i-IN_ye_X6IVA6XU.png" alt="Casa Arena Chicxulub Puerto - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271ae4_yNz9SAORgjdDSxZxTQRgpVNpXxaBvcTby6vyF-GVJeE.png" alt="Casa Arena Chicxulub Puerto I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bba8c47e58ad0399f43c_uFRsfp3Ns3HdvIM4_6NjwkoTtZ_FE_PaEUQXoyj9-Cg.png" alt="Casa Arena Chicxulub Puerto I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6926e907256ff5f4ca271af0_ah8LOv5VUDH1J_8lIGVLIiJZsa-i-IN_ye_X6IVA6XU.png" alt="Casa Arena Chicxulub Puerto I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -824,12 +825,12 @@
     <hr>
 
     <article class="property" id="property-14">
-        <h2>Casa Marea Chelem</h2>
+        <h2>Casa Marea Chelem I</h2>
 
-        <!-- RAG_METADATA: title="Casa Marea Chelem" | url="https://realestate-viviendas.vercel.app/casa-lumio" | slug="casa-lumio" | specs="En construcción | 4 Dormitorios | 3 Baños | 156 m² | Precio: 1.120.000 €" | summary="4 dorm, 3 baños, 156 m², 1.120.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbaafc21e7c304fd3c1a_VoS47gFX1D4B4O6XIb7TwQdBCGf5Dw2r_aT3fVochtA.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c32_pFUx8vnWMKtVO97sIuDAQwdsjXc7lCcZrGcVYiiiEwE.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c2c_9hedKwzMGPrhfskZBansFaYjPeyZZCJ-3zeMWIbrpCM.png" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Marea Chelem I" | url="https://realestate-viviendas.vercel.app/casa-lumio" | slug="casa-lumio" | specs="En construcción | 4 Dormitorios | 3 Baños | 156 m² | Precio: 1.120.000 €" | summary="4 dorm, 3 baños, 156 m², 1.120.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbaafc21e7c304fd3c1a_VoS47gFX1D4B4O6XIb7TwQdBCGf5Dw2r_aT3fVochtA.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c32_pFUx8vnWMKtVO97sIuDAQwdsjXc7lCcZrGcVYiiiEwE.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c2c_9hedKwzMGPrhfskZBansFaYjPeyZZCJ-3zeMWIbrpCM.png" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Marea Chelem |
+            <strong>Nombre:</strong> Casa Marea Chelem I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-lumio |
             <strong>Slug:</strong> casa-lumio |
             <strong>Specs:</strong> En construcción | 4 Dormitorios | 3 Baños | 156 m² | Precio: 1.120.000 € |
@@ -848,9 +849,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbaafc21e7c304fd3c1a_VoS47gFX1D4B4O6XIb7TwQdBCGf5Dw2r_aT3fVochtA.png" alt="Casa Marea Chelem - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c32_pFUx8vnWMKtVO97sIuDAQwdsjXc7lCcZrGcVYiiiEwE.png" alt="Casa Marea Chelem - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c2c_9hedKwzMGPrhfskZBansFaYjPeyZZCJ-3zeMWIbrpCM.png" alt="Casa Marea Chelem - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbaafc21e7c304fd3c1a_VoS47gFX1D4B4O6XIb7TwQdBCGf5Dw2r_aT3fVochtA.png" alt="Casa Marea Chelem I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c32_pFUx8vnWMKtVO97sIuDAQwdsjXc7lCcZrGcVYiiiEwE.png" alt="Casa Marea Chelem I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6931bbabfc21e7c304fd3c2c_9hedKwzMGPrhfskZBansFaYjPeyZZCJ-3zeMWIbrpCM.png" alt="Casa Marea Chelem I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -1311,12 +1312,12 @@
     <hr>
 
     <article class="property" id="property-22">
-        <h2>Casa Concha Sisal</h2>
+        <h2>Casa Concha Sisal II</h2>
 
-        <!-- RAG_METADATA: title="Casa Concha Sisal" | url="https://realestate-viviendas.vercel.app/casa-bruisha" | slug="casa-bruisha" | specs="En Renovación | 5 Dormitorios | 4 Baños | 200 m² | Precio: 1.440.000 €" | summary="5 dorm, 4 baños, 200 m², 1.440.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b78e0463784c63892a_5W7l3lW5SRqMaVPoBJiIDURBm0FhGEqh6KjnHKZF76E.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63895b_dvwxGkmYxSjUlW4VeptDXWeoC7e1RdnYQ3qQLn4-p20.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63893d_YgpaM64yOq1hEEMWoaqC4U5Ln4NoLP9IDgx3zZPeIIA.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Concha Sisal II" | url="https://realestate-viviendas.vercel.app/casa-bruisha" | slug="casa-bruisha" | specs="En Renovación | 5 Dormitorios | 4 Baños | 200 m² | Precio: 1.440.000 €" | summary="5 dorm, 4 baños, 200 m², 1.440.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b78e0463784c63892a_5W7l3lW5SRqMaVPoBJiIDURBm0FhGEqh6KjnHKZF76E.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63895b_dvwxGkmYxSjUlW4VeptDXWeoC7e1RdnYQ3qQLn4-p20.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63893d_YgpaM64yOq1hEEMWoaqC4U5Ln4NoLP9IDgx3zZPeIIA.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Concha Sisal |
+            <strong>Nombre:</strong> Casa Concha Sisal II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-bruisha |
             <strong>Slug:</strong> casa-bruisha |
             <strong>Specs:</strong> En Renovación | 5 Dormitorios | 4 Baños | 200 m² | Precio: 1.440.000 € |
@@ -1335,9 +1336,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b78e0463784c63892a_5W7l3lW5SRqMaVPoBJiIDURBm0FhGEqh6KjnHKZF76E.jpeg" alt="Casa Concha Sisal - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63895b_dvwxGkmYxSjUlW4VeptDXWeoC7e1RdnYQ3qQLn4-p20.jpeg" alt="Casa Concha Sisal - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63893d_YgpaM64yOq1hEEMWoaqC4U5Ln4NoLP9IDgx3zZPeIIA.jpeg" alt="Casa Concha Sisal - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b78e0463784c63892a_5W7l3lW5SRqMaVPoBJiIDURBm0FhGEqh6KjnHKZF76E.jpeg" alt="Casa Concha Sisal II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63895b_dvwxGkmYxSjUlW4VeptDXWeoC7e1RdnYQ3qQLn4-p20.jpeg" alt="Casa Concha Sisal II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/698080b88e0463784c63893d_YgpaM64yOq1hEEMWoaqC4U5Ln4NoLP9IDgx3zZPeIIA.jpeg" alt="Casa Concha Sisal II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -1372,12 +1373,12 @@
     <hr>
 
     <article class="property" id="property-23">
-        <h2>Casa Viento Celestún</h2>
+        <h2>Casa Viento Celestún II</h2>
 
-        <!-- RAG_METADATA: title="Casa Viento Celestún" | url="https://realestate-viviendas.vercel.app/casa-bini" | slug="casa-bini" | specs="4 Dormitorios | 4 Baños | 187 m² | Precio: 1.800.000 €" | summary="4 dorm, 4 baños, 187 m², 1.800.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eb10_RC0l-yktFdTRiAU9CYxJSLevvITcjg6h0av-ecYu8Ac.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf2_vKNJyLD5WfE_E-kU7ouyrURimfl5MMSRDeYCTvWCw-g.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf5_6BOWBegEIN3LR2LseGYc5O5Di6fn3UlcAW67pwR59G8.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Viento Celestún II" | url="https://realestate-viviendas.vercel.app/casa-bini" | slug="casa-bini" | specs="4 Dormitorios | 4 Baños | 187 m² | Precio: 1.800.000 €" | summary="4 dorm, 4 baños, 187 m², 1.800.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eb10_RC0l-yktFdTRiAU9CYxJSLevvITcjg6h0av-ecYu8Ac.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf2_vKNJyLD5WfE_E-kU7ouyrURimfl5MMSRDeYCTvWCw-g.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf5_6BOWBegEIN3LR2LseGYc5O5Di6fn3UlcAW67pwR59G8.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Viento Celestún |
+            <strong>Nombre:</strong> Casa Viento Celestún II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-bini |
             <strong>Slug:</strong> casa-bini |
             <strong>Specs:</strong> 4 Dormitorios | 4 Baños | 187 m² | Precio: 1.800.000 € |
@@ -1396,9 +1397,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eb10_RC0l-yktFdTRiAU9CYxJSLevvITcjg6h0av-ecYu8Ac.jpeg" alt="Casa Viento Celestún - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf2_vKNJyLD5WfE_E-kU7ouyrURimfl5MMSRDeYCTvWCw-g.jpeg" alt="Casa Viento Celestún - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf5_6BOWBegEIN3LR2LseGYc5O5Di6fn3UlcAW67pwR59G8.jpeg" alt="Casa Viento Celestún - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eb10_RC0l-yktFdTRiAU9CYxJSLevvITcjg6h0av-ecYu8Ac.jpeg" alt="Casa Viento Celestún II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf2_vKNJyLD5WfE_E-kU7ouyrURimfl5MMSRDeYCTvWCw-g.jpeg" alt="Casa Viento Celestún II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6826f14321d2ea68a195eaf5_6BOWBegEIN3LR2LseGYc5O5Di6fn3UlcAW67pwR59G8.jpeg" alt="Casa Viento Celestún II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -1432,12 +1433,12 @@
     <hr>
 
     <article class="property" id="property-24">
-        <h2>Casa Brisa Progreso</h2>
+        <h2>Casa Brisa Progreso II</h2>
 
-        <!-- RAG_METADATA: title="Casa Brisa Progreso" | url="https://realestate-viviendas.vercel.app/casa-tosalet" | slug="casa-tosalet" | specs="4 Dormitorios | 5 Baños | 220 m² | Precio: 1.480.000 €" | summary="4 dorm, 5 baños, 220 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f56df70cae2abd23a21_K9p9fFZ2pxnCQhkUJrkmv6fb5l9boPfirHdxN0REFcY.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23acd_w1I4QN_v8VNRJiRKUFZM5EE6qNgqnWwgJiOzQzkJpdI.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23a90_ntAZ6pSb_LGrl0VGc7oQLDfLWdrNn1Itd4Wj9YAhKNY.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Brisa Progreso II" | url="https://realestate-viviendas.vercel.app/casa-tosalet" | slug="casa-tosalet" | specs="4 Dormitorios | 5 Baños | 220 m² | Precio: 1.480.000 €" | summary="4 dorm, 5 baños, 220 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f56df70cae2abd23a21_K9p9fFZ2pxnCQhkUJrkmv6fb5l9boPfirHdxN0REFcY.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23acd_w1I4QN_v8VNRJiRKUFZM5EE6qNgqnWwgJiOzQzkJpdI.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23a90_ntAZ6pSb_LGrl0VGc7oQLDfLWdrNn1Itd4Wj9YAhKNY.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Brisa Progreso |
+            <strong>Nombre:</strong> Casa Brisa Progreso II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-tosalet |
             <strong>Slug:</strong> casa-tosalet |
             <strong>Specs:</strong> 4 Dormitorios | 5 Baños | 220 m² | Precio: 1.480.000 € |
@@ -1456,9 +1457,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f56df70cae2abd23a21_K9p9fFZ2pxnCQhkUJrkmv6fb5l9boPfirHdxN0REFcY.jpeg" alt="Casa Brisa Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23acd_w1I4QN_v8VNRJiRKUFZM5EE6qNgqnWwgJiOzQzkJpdI.jpeg" alt="Casa Brisa Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23a90_ntAZ6pSb_LGrl0VGc7oQLDfLWdrNn1Itd4Wj9YAhKNY.jpeg" alt="Casa Brisa Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f56df70cae2abd23a21_K9p9fFZ2pxnCQhkUJrkmv6fb5l9boPfirHdxN0REFcY.jpeg" alt="Casa Brisa Progreso II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23acd_w1I4QN_v8VNRJiRKUFZM5EE6qNgqnWwgJiOzQzkJpdI.jpeg" alt="Casa Brisa Progreso II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67e50f57df70cae2abd23a90_ntAZ6pSb_LGrl0VGc7oQLDfLWdrNn1Itd4Wj9YAhKNY.jpeg" alt="Casa Brisa Progreso II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -1492,12 +1493,12 @@
     <hr>
 
     <article class="property" id="property-25">
-        <h2>Casa Arena Chicxulub Puerto</h2>
+        <h2>Casa Arena Chicxulub Puerto II</h2>
 
-        <!-- RAG_METADATA: title="Casa Arena Chicxulub Puerto" | url="https://realestate-viviendas.vercel.app/casa-naut" | slug="casa-naut" | specs="REVENTA | 4 Dormitorios | 3 Baños | 146 m² | Precio: 1.040.000 €" | summary="4 dorm, 3 baños, 146 m², 1.040.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897a831cec997e40f7db6_bgzjf4nlALbbJ3K1Rm14lke_mNuDTHrg58b2bS2I77c.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7dfc_2WUW5uXs5KLR5OvNGAyCjB8T20vY95ZqYohYmehs_T0.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7e0b_uJRwpTF8-ScfMupKlthmnmmdeg7XsuVshP94fESc39k.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Arena Chicxulub Puerto II" | url="https://realestate-viviendas.vercel.app/casa-naut" | slug="casa-naut" | specs="REVENTA | 4 Dormitorios | 3 Baños | 146 m² | Precio: 1.040.000 €" | summary="4 dorm, 3 baños, 146 m², 1.040.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897a831cec997e40f7db6_bgzjf4nlALbbJ3K1Rm14lke_mNuDTHrg58b2bS2I77c.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7dfc_2WUW5uXs5KLR5OvNGAyCjB8T20vY95ZqYohYmehs_T0.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7e0b_uJRwpTF8-ScfMupKlthmnmmdeg7XsuVshP94fESc39k.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Arena Chicxulub Puerto |
+            <strong>Nombre:</strong> Casa Arena Chicxulub Puerto II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-naut |
             <strong>Slug:</strong> casa-naut |
             <strong>Specs:</strong> REVENTA | 4 Dormitorios | 3 Baños | 146 m² | Precio: 1.040.000 € |
@@ -1516,9 +1517,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897a831cec997e40f7db6_bgzjf4nlALbbJ3K1Rm14lke_mNuDTHrg58b2bS2I77c.jpeg" alt="Casa Arena Chicxulub Puerto - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7dfc_2WUW5uXs5KLR5OvNGAyCjB8T20vY95ZqYohYmehs_T0.jpeg" alt="Casa Arena Chicxulub Puerto - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7e0b_uJRwpTF8-ScfMupKlthmnmmdeg7XsuVshP94fESc39k.jpeg" alt="Casa Arena Chicxulub Puerto - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897a831cec997e40f7db6_bgzjf4nlALbbJ3K1Rm14lke_mNuDTHrg58b2bS2I77c.jpeg" alt="Casa Arena Chicxulub Puerto II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7dfc_2WUW5uXs5KLR5OvNGAyCjB8T20vY95ZqYohYmehs_T0.jpeg" alt="Casa Arena Chicxulub Puerto II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897aa31cec997e40f7e0b_uJRwpTF8-ScfMupKlthmnmmdeg7XsuVshP94fESc39k.jpeg" alt="Casa Arena Chicxulub Puerto II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -1553,12 +1554,12 @@
     <hr>
 
     <article class="property" id="property-26">
-        <h2>Casa Marea Chelem</h2>
+        <h2>Casa Marea Chelem II</h2>
 
-        <!-- RAG_METADATA: title="Casa Marea Chelem" | url="https://realestate-viviendas.vercel.app/casa-capdera-duplex" | slug="casa-capdera-duplex" | specs="VENDIDO | 4 Dormitorios | 3 Baños | 133 m² | Precio: 1.280.000 €" | summary="4 dorm, 3 baños, 133 m², 1.280.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9de_KMQ3gA3zOCe2CqYz2CSuwp9cSjKyqnWrtlYaD-Z_e8o.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9db_8berwI5JfHlaIqCDwY8xPkM7HXXcraOfzw9967WWVtc.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9e1_8xszbYXcgUZ-pnXb2lTinIe5YJDz0d8Z9fiqmHXA3tQ.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Marea Chelem II" | url="https://realestate-viviendas.vercel.app/casa-capdera-duplex" | slug="casa-capdera-duplex" | specs="VENDIDO | 4 Dormitorios | 3 Baños | 133 m² | Precio: 1.280.000 €" | summary="4 dorm, 3 baños, 133 m², 1.280.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9de_KMQ3gA3zOCe2CqYz2CSuwp9cSjKyqnWrtlYaD-Z_e8o.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9db_8berwI5JfHlaIqCDwY8xPkM7HXXcraOfzw9967WWVtc.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9e1_8xszbYXcgUZ-pnXb2lTinIe5YJDz0d8Z9fiqmHXA3tQ.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Marea Chelem |
+            <strong>Nombre:</strong> Casa Marea Chelem II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-capdera-duplex |
             <strong>Slug:</strong> casa-capdera-duplex |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 3 Baños | 133 m² | Precio: 1.280.000 € |
@@ -1577,9 +1578,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9de_KMQ3gA3zOCe2CqYz2CSuwp9cSjKyqnWrtlYaD-Z_e8o.jpeg" alt="Casa Marea Chelem - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9db_8berwI5JfHlaIqCDwY8xPkM7HXXcraOfzw9967WWVtc.jpeg" alt="Casa Marea Chelem - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9e1_8xszbYXcgUZ-pnXb2lTinIe5YJDz0d8Z9fiqmHXA3tQ.jpeg" alt="Casa Marea Chelem - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9de_KMQ3gA3zOCe2CqYz2CSuwp9cSjKyqnWrtlYaD-Z_e8o.jpeg" alt="Casa Marea Chelem II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9db_8berwI5JfHlaIqCDwY8xPkM7HXXcraOfzw9967WWVtc.jpeg" alt="Casa Marea Chelem II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/697206c8bc711bb98451f9e1_8xszbYXcgUZ-pnXb2lTinIe5YJDz0d8Z9fiqmHXA3tQ.jpeg" alt="Casa Marea Chelem II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -1614,12 +1615,12 @@
     <hr>
 
     <article class="property" id="property-27">
-        <h2>Casa Hoyo18 Country</h2>
+        <h2>Casa Hoyo18 Country II</h2>
 
-        <!-- RAG_METADATA: title="Casa Hoyo18 Country" | url="https://realestate-viviendas.vercel.app/casa-valderrama" | slug="casa-valderrama" | specs="3 Dormitorios | 4 Baños | 222 m² | Precio: 1.320.000 €" | summary="3 dorm, 4 baños, 222 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ce357f9cc9a8c8eba2_cb1zQH0OlEhDM2R-k6DYj5kaqiffA7HQKyYwNyeueQg.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd7_83Heu2Z2gSgg4T6D0pqGHY58H3uwxwKT9WHFQQOpn5Q.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd4_jN3ZNmWjoNj0mmGsDNcoLJ7Ol_u-3V4BUgacYsSdwxY.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Hoyo18 Country II" | url="https://realestate-viviendas.vercel.app/casa-valderrama" | slug="casa-valderrama" | specs="3 Dormitorios | 4 Baños | 222 m² | Precio: 1.320.000 €" | summary="3 dorm, 4 baños, 222 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ce357f9cc9a8c8eba2_cb1zQH0OlEhDM2R-k6DYj5kaqiffA7HQKyYwNyeueQg.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd7_83Heu2Z2gSgg4T6D0pqGHY58H3uwxwKT9WHFQQOpn5Q.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd4_jN3ZNmWjoNj0mmGsDNcoLJ7Ol_u-3V4BUgacYsSdwxY.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Hoyo18 Country |
+            <strong>Nombre:</strong> Casa Hoyo18 Country II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-valderrama |
             <strong>Slug:</strong> casa-valderrama |
             <strong>Specs:</strong> 3 Dormitorios | 4 Baños | 222 m² | Precio: 1.320.000 € |
@@ -1638,9 +1639,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ce357f9cc9a8c8eba2_cb1zQH0OlEhDM2R-k6DYj5kaqiffA7HQKyYwNyeueQg.jpeg" alt="Casa Hoyo18 Country - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd7_83Heu2Z2gSgg4T6D0pqGHY58H3uwxwKT9WHFQQOpn5Q.jpeg" alt="Casa Hoyo18 Country - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd4_jN3ZNmWjoNj0mmGsDNcoLJ7Ol_u-3V4BUgacYsSdwxY.jpeg" alt="Casa Hoyo18 Country - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ce357f9cc9a8c8eba2_cb1zQH0OlEhDM2R-k6DYj5kaqiffA7HQKyYwNyeueQg.jpeg" alt="Casa Hoyo18 Country II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd7_83Heu2Z2gSgg4T6D0pqGHY58H3uwxwKT9WHFQQOpn5Q.jpeg" alt="Casa Hoyo18 Country II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896cf357f9cc9a8c8ebd4_jN3ZNmWjoNj0mmGsDNcoLJ7Ol_u-3V4BUgacYsSdwxY.jpeg" alt="Casa Hoyo18 Country II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2221,12 +2222,12 @@
     <hr>
 
     <article class="property" id="property-37">
-        <h2>Casa Arena Celestún</h2>
+        <h2>Casa Arena Celestún I</h2>
 
-        <!-- RAG_METADATA: title="Casa Arena Celestún" | url="https://realestate-viviendas.vercel.app/casa-tarida-ii" | slug="casa-tarida-ii" | specs="En construcción | 3 Dormitorios | 2 Baños | 100 m² | Precio: 1.400.000 €" | summary="3 dorm, 2 baños, 100 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb4d_HMmk1q4TSBVblylVEHgP4bL1vN7zyy52phFSDVz464k.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb3c_SuQY3yrpNIkTdg-IkCrdIWU4K0TvDmXVxcIPVt1RAfw.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb57_8ls2uUxsuwWf_GTsY1xNrgq6go5Ji7iTXVwyeYQMhpQ.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Arena Celestún I" | url="https://realestate-viviendas.vercel.app/casa-tarida-ii" | slug="casa-tarida-ii" | specs="En construcción | 3 Dormitorios | 2 Baños | 100 m² | Precio: 1.400.000 €" | summary="3 dorm, 2 baños, 100 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb4d_HMmk1q4TSBVblylVEHgP4bL1vN7zyy52phFSDVz464k.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb3c_SuQY3yrpNIkTdg-IkCrdIWU4K0TvDmXVxcIPVt1RAfw.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb57_8ls2uUxsuwWf_GTsY1xNrgq6go5Ji7iTXVwyeYQMhpQ.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Arena Celestún |
+            <strong>Nombre:</strong> Casa Arena Celestún I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-tarida-ii |
             <strong>Slug:</strong> casa-tarida-ii |
             <strong>Specs:</strong> En construcción | 3 Dormitorios | 2 Baños | 100 m² | Precio: 1.400.000 € |
@@ -2245,9 +2246,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb4d_HMmk1q4TSBVblylVEHgP4bL1vN7zyy52phFSDVz464k.jpeg" alt="Casa Arena Celestún - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb3c_SuQY3yrpNIkTdg-IkCrdIWU4K0TvDmXVxcIPVt1RAfw.jpeg" alt="Casa Arena Celestún - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb57_8ls2uUxsuwWf_GTsY1xNrgq6go5Ji7iTXVwyeYQMhpQ.jpeg" alt="Casa Arena Celestún - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb4d_HMmk1q4TSBVblylVEHgP4bL1vN7zyy52phFSDVz464k.jpeg" alt="Casa Arena Celestún I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb3c_SuQY3yrpNIkTdg-IkCrdIWU4K0TvDmXVxcIPVt1RAfw.jpeg" alt="Casa Arena Celestún I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897ad18369c7dde58bb57_8ls2uUxsuwWf_GTsY1xNrgq6go5Ji7iTXVwyeYQMhpQ.jpeg" alt="Casa Arena Celestún I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2282,12 +2283,12 @@
     <hr>
 
     <article class="property" id="property-38">
-        <h2>Casa Marea Progreso</h2>
+        <h2>Casa Marea Progreso II</h2>
 
-        <!-- RAG_METADATA: title="Casa Marea Progreso" | url="https://realestate-viviendas.vercel.app/casa-muntanyo" | slug="casa-muntanyo" | specs="REVENTA | 3 Dormitorios | 2 Baños | 125 m² | Precio: 1.120.000 €" | summary="3 dorm, 2 baños, 125 m², 1.120.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897d8e8d5d4520361f535_jH2tIXs9QsKlYYcEmpknaLr76L5-0-DHyDRxaQ7kjrw.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd93_T4NDIEfUpUe0UNUDaiNs6jopXr8xwErK7txAFgeZY64.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd8d_dOfxpflhLbvVT-1i1XFrz9NTkAMD2jXVIdQqz8tF7ts.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Marea Progreso II" | url="https://realestate-viviendas.vercel.app/casa-muntanyo" | slug="casa-muntanyo" | specs="REVENTA | 3 Dormitorios | 2 Baños | 125 m² | Precio: 1.120.000 €" | summary="3 dorm, 2 baños, 125 m², 1.120.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897d8e8d5d4520361f535_jH2tIXs9QsKlYYcEmpknaLr76L5-0-DHyDRxaQ7kjrw.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd93_T4NDIEfUpUe0UNUDaiNs6jopXr8xwErK7txAFgeZY64.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd8d_dOfxpflhLbvVT-1i1XFrz9NTkAMD2jXVIdQqz8tF7ts.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Marea Progreso |
+            <strong>Nombre:</strong> Casa Marea Progreso II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-muntanyo |
             <strong>Slug:</strong> casa-muntanyo |
             <strong>Specs:</strong> REVENTA | 3 Dormitorios | 2 Baños | 125 m² | Precio: 1.120.000 € |
@@ -2306,9 +2307,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897d8e8d5d4520361f535_jH2tIXs9QsKlYYcEmpknaLr76L5-0-DHyDRxaQ7kjrw.jpeg" alt="Casa Marea Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd93_T4NDIEfUpUe0UNUDaiNs6jopXr8xwErK7txAFgeZY64.jpeg" alt="Casa Marea Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd8d_dOfxpflhLbvVT-1i1XFrz9NTkAMD2jXVIdQqz8tF7ts.jpeg" alt="Casa Marea Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897d8e8d5d4520361f535_jH2tIXs9QsKlYYcEmpknaLr76L5-0-DHyDRxaQ7kjrw.jpeg" alt="Casa Marea Progreso II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd93_T4NDIEfUpUe0UNUDaiNs6jopXr8xwErK7txAFgeZY64.jpeg" alt="Casa Marea Progreso II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68ff51c332858ac37adfbd8d_dOfxpflhLbvVT-1i1XFrz9NTkAMD2jXVIdQqz8tF7ts.jpeg" alt="Casa Marea Progreso II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2343,12 +2344,12 @@
     <hr>
 
     <article class="property" id="property-39">
-        <h2>Casa Duna Chicxulub Puerto</h2>
+        <h2>Casa Duna Chicxulub Puerto I</h2>
 
-        <!-- RAG_METADATA: title="Casa Duna Chicxulub Puerto" | url="https://realestate-viviendas.vercel.app/casa-fir" | slug="casa-fir" | specs="VENDIDO | 5 Dormitorios | 3 Baños | 180 m² | Precio: 1.440.000 €" | summary="5 dorm, 3 baños, 180 m², 1.440.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8974ec4590da7fa0ab7c2_vJa-Om6Nl8JqcNoGpqCiQEIL3lwpIj5rKt7UQGEBX38.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d93fbcb69246bc789b3_VTURzxUYeoRzwn5tIOOLToFnEzBX6XqM8TMf-Z4e94Y.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d92fbcb69246bc77cad_UvC1XzzpTBd6vnakV7gDyumMOYi3XRtWogIdkdu8Fnw.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Duna Chicxulub Puerto I" | url="https://realestate-viviendas.vercel.app/casa-fir" | slug="casa-fir" | specs="VENDIDO | 5 Dormitorios | 3 Baños | 180 m² | Precio: 1.440.000 €" | summary="5 dorm, 3 baños, 180 m², 1.440.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8974ec4590da7fa0ab7c2_vJa-Om6Nl8JqcNoGpqCiQEIL3lwpIj5rKt7UQGEBX38.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d93fbcb69246bc789b3_VTURzxUYeoRzwn5tIOOLToFnEzBX6XqM8TMf-Z4e94Y.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d92fbcb69246bc77cad_UvC1XzzpTBd6vnakV7gDyumMOYi3XRtWogIdkdu8Fnw.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Duna Chicxulub Puerto |
+            <strong>Nombre:</strong> Casa Duna Chicxulub Puerto I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-fir |
             <strong>Slug:</strong> casa-fir |
             <strong>Specs:</strong> VENDIDO | 5 Dormitorios | 3 Baños | 180 m² | Precio: 1.440.000 € |
@@ -2367,9 +2368,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8974ec4590da7fa0ab7c2_vJa-Om6Nl8JqcNoGpqCiQEIL3lwpIj5rKt7UQGEBX38.jpeg" alt="Casa Duna Chicxulub Puerto - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d93fbcb69246bc789b3_VTURzxUYeoRzwn5tIOOLToFnEzBX6XqM8TMf-Z4e94Y.jpeg" alt="Casa Duna Chicxulub Puerto - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d92fbcb69246bc77cad_UvC1XzzpTBd6vnakV7gDyumMOYi3XRtWogIdkdu8Fnw.jpeg" alt="Casa Duna Chicxulub Puerto - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8974ec4590da7fa0ab7c2_vJa-Om6Nl8JqcNoGpqCiQEIL3lwpIj5rKt7UQGEBX38.jpeg" alt="Casa Duna Chicxulub Puerto I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d93fbcb69246bc789b3_VTURzxUYeoRzwn5tIOOLToFnEzBX6XqM8TMf-Z4e94Y.jpeg" alt="Casa Duna Chicxulub Puerto I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d92fbcb69246bc77cad_UvC1XzzpTBd6vnakV7gDyumMOYi3XRtWogIdkdu8Fnw.jpeg" alt="Casa Duna Chicxulub Puerto I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2404,12 +2405,12 @@
     <hr>
 
     <article class="property" id="property-40">
-        <h2>Casa Coral Chelem</h2>
+        <h2>Casa Coral Chelem I</h2>
 
-        <!-- RAG_METADATA: title="Casa Coral Chelem" | url="https://realestate-viviendas.vercel.app/casa-nin" | slug="casa-nin" | specs="VENDIDO | 3 Dormitorios | 2 Baños | 119 m² | Precio: 1.000.000 €" | summary="3 dorm, 2 baños, 119 m², 1.000.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237abff_97pDcqPAEuwiCkP9kRV5rkJwz4H4yA2al41JF1pvUaY.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237aba6_QT9U1RDp_bD7YmS6qYXqZnvTFcAGLQE9XFdr0o1jkl8.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89753e06641df8237ac2f_JYqZaJeZkV5J_tPlzIcsyVddRKE5stJ30e06hOPqLO8.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Coral Chelem I" | url="https://realestate-viviendas.vercel.app/casa-nin" | slug="casa-nin" | specs="VENDIDO | 3 Dormitorios | 2 Baños | 119 m² | Precio: 1.000.000 €" | summary="3 dorm, 2 baños, 119 m², 1.000.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237abff_97pDcqPAEuwiCkP9kRV5rkJwz4H4yA2al41JF1pvUaY.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237aba6_QT9U1RDp_bD7YmS6qYXqZnvTFcAGLQE9XFdr0o1jkl8.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89753e06641df8237ac2f_JYqZaJeZkV5J_tPlzIcsyVddRKE5stJ30e06hOPqLO8.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Coral Chelem |
+            <strong>Nombre:</strong> Casa Coral Chelem I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-nin |
             <strong>Slug:</strong> casa-nin |
             <strong>Specs:</strong> VENDIDO | 3 Dormitorios | 2 Baños | 119 m² | Precio: 1.000.000 € |
@@ -2428,9 +2429,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237abff_97pDcqPAEuwiCkP9kRV5rkJwz4H4yA2al41JF1pvUaY.jpeg" alt="Casa Coral Chelem - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237aba6_QT9U1RDp_bD7YmS6qYXqZnvTFcAGLQE9XFdr0o1jkl8.jpeg" alt="Casa Coral Chelem - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89753e06641df8237ac2f_JYqZaJeZkV5J_tPlzIcsyVddRKE5stJ30e06hOPqLO8.jpeg" alt="Casa Coral Chelem - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237abff_97pDcqPAEuwiCkP9kRV5rkJwz4H4yA2al41JF1pvUaY.jpeg" alt="Casa Coral Chelem I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89752e06641df8237aba6_QT9U1RDp_bD7YmS6qYXqZnvTFcAGLQE9XFdr0o1jkl8.jpeg" alt="Casa Coral Chelem I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d89753e06641df8237ac2f_JYqZaJeZkV5J_tPlzIcsyVddRKE5stJ30e06hOPqLO8.jpeg" alt="Casa Coral Chelem I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2465,12 +2466,12 @@
     <hr>
 
     <article class="property" id="property-41">
-        <h2>Casa Sal Telchac Puerto</h2>
+        <h2>Casa Sal Telchac Puerto I</h2>
 
-        <!-- RAG_METADATA: title="Casa Sal Telchac Puerto" | url="https://realestate-viviendas.vercel.app/casa-ribes" | slug="casa-ribes" | specs="REVENTA | 4 Dormitorios | 4 Baños | 284 m² | Precio: 2.360.000 €" | summary="4 dorm, 4 baños, 284 m², 2.360.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa97_2YBQDeQV6WNiLAO7kDM4jm3wiwek0cEfr1EkI_UvgLo.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa94_JxZ9AgzkadmiIzxSFYFNPE9Xm0Cef30dvcjIXxOcm-8.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2a9e1_x5qpf0M49nx4mfjckmMdq9DybycdHR9aqC_pCJGYSB8.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Sal Telchac Puerto I" | url="https://realestate-viviendas.vercel.app/casa-ribes" | slug="casa-ribes" | specs="REVENTA | 4 Dormitorios | 4 Baños | 284 m² | Precio: 2.360.000 €" | summary="4 dorm, 4 baños, 284 m², 2.360.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa97_2YBQDeQV6WNiLAO7kDM4jm3wiwek0cEfr1EkI_UvgLo.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa94_JxZ9AgzkadmiIzxSFYFNPE9Xm0Cef30dvcjIXxOcm-8.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2a9e1_x5qpf0M49nx4mfjckmMdq9DybycdHR9aqC_pCJGYSB8.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Sal Telchac Puerto |
+            <strong>Nombre:</strong> Casa Sal Telchac Puerto I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-ribes |
             <strong>Slug:</strong> casa-ribes |
             <strong>Specs:</strong> REVENTA | 4 Dormitorios | 4 Baños | 284 m² | Precio: 2.360.000 € |
@@ -2489,9 +2490,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa97_2YBQDeQV6WNiLAO7kDM4jm3wiwek0cEfr1EkI_UvgLo.jpeg" alt="Casa Sal Telchac Puerto - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa94_JxZ9AgzkadmiIzxSFYFNPE9Xm0Cef30dvcjIXxOcm-8.jpeg" alt="Casa Sal Telchac Puerto - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2a9e1_x5qpf0M49nx4mfjckmMdq9DybycdHR9aqC_pCJGYSB8.jpeg" alt="Casa Sal Telchac Puerto - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa97_2YBQDeQV6WNiLAO7kDM4jm3wiwek0cEfr1EkI_UvgLo.jpeg" alt="Casa Sal Telchac Puerto I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2aa94_JxZ9AgzkadmiIzxSFYFNPE9Xm0Cef30dvcjIXxOcm-8.jpeg" alt="Casa Sal Telchac Puerto I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896bf120f77ec73e2a9e1_x5qpf0M49nx4mfjckmMdq9DybycdHR9aqC_pCJGYSB8.jpeg" alt="Casa Sal Telchac Puerto I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2526,12 +2527,12 @@
     <hr>
 
     <article class="property" id="property-42">
-        <h2>Casa Horizonte Sisal</h2>
+        <h2>Casa Horizonte Sisal I</h2>
 
-        <!-- RAG_METADATA: title="Casa Horizonte Sisal" | url="https://realestate-viviendas.vercel.app/casa-ruda" | slug="casa-ruda" | specs="VENDIDO | 5 Dormitorios | 3 Baños | 130 m² | Precio: 1.400.000 €" | summary="5 dorm, 3 baños, 130 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf74__jiqIwaFp8WsVGfcHwzlv0XCfUNHg439suja_pkfr6U.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7a_nhyaYUtSp_A2RgXYB4-W-Ms_SfI_EAAOaNYnZ3VuYSU.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7d_rpQ-5ArGG_nKFROKNv5u0eUp8UTa8okD2XrlIlmyaOg.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Horizonte Sisal I" | url="https://realestate-viviendas.vercel.app/casa-ruda" | slug="casa-ruda" | specs="VENDIDO | 5 Dormitorios | 3 Baños | 130 m² | Precio: 1.400.000 €" | summary="5 dorm, 3 baños, 130 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf74__jiqIwaFp8WsVGfcHwzlv0XCfUNHg439suja_pkfr6U.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7a_nhyaYUtSp_A2RgXYB4-W-Ms_SfI_EAAOaNYnZ3VuYSU.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7d_rpQ-5ArGG_nKFROKNv5u0eUp8UTa8okD2XrlIlmyaOg.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Horizonte Sisal |
+            <strong>Nombre:</strong> Casa Horizonte Sisal I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-ruda |
             <strong>Slug:</strong> casa-ruda |
             <strong>Specs:</strong> VENDIDO | 5 Dormitorios | 3 Baños | 130 m² | Precio: 1.400.000 € |
@@ -2550,9 +2551,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf74__jiqIwaFp8WsVGfcHwzlv0XCfUNHg439suja_pkfr6U.jpeg" alt="Casa Horizonte Sisal - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7a_nhyaYUtSp_A2RgXYB4-W-Ms_SfI_EAAOaNYnZ3VuYSU.jpeg" alt="Casa Horizonte Sisal - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7d_rpQ-5ArGG_nKFROKNv5u0eUp8UTa8okD2XrlIlmyaOg.jpeg" alt="Casa Horizonte Sisal - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf74__jiqIwaFp8WsVGfcHwzlv0XCfUNHg439suja_pkfr6U.jpeg" alt="Casa Horizonte Sisal I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7a_nhyaYUtSp_A2RgXYB4-W-Ms_SfI_EAAOaNYnZ3VuYSU.jpeg" alt="Casa Horizonte Sisal I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d8976184b20d53fd8adf7d_rpQ-5ArGG_nKFROKNv5u0eUp8UTa8okD2XrlIlmyaOg.jpeg" alt="Casa Horizonte Sisal I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2587,12 +2588,12 @@
     <hr>
 
     <article class="property" id="property-43">
-        <h2>Casa Muelle Celestún</h2>
+        <h2>Casa Muelle Celestún I</h2>
 
-        <!-- RAG_METADATA: title="Casa Muelle Celestún" | url="https://realestate-viviendas.vercel.app/casa-gades" | slug="casa-gades" | specs="VENDIDO | 4 Dormitorios | 5 Baños | 250 m² | Precio: 1.480.000 €" | summary="4 dorm, 5 baños, 250 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5b1_OB0_3PhQed_yGtaTQ0UiSSQ9wukcV_gSR_HMdqm7o-M.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5bd_c8B4gcpvuHv1TDoZJMRE4s-tAt9cK9A6_jP_wTNIdsM.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5d6_So-OAmVVuoF-h-YTKbazuJfisDHAJjcCGxGmc6fBmIo.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Muelle Celestún I" | url="https://realestate-viviendas.vercel.app/casa-gades" | slug="casa-gades" | specs="VENDIDO | 4 Dormitorios | 5 Baños | 250 m² | Precio: 1.480.000 €" | summary="4 dorm, 5 baños, 250 m², 1.480.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5b1_OB0_3PhQed_yGtaTQ0UiSSQ9wukcV_gSR_HMdqm7o-M.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5bd_c8B4gcpvuHv1TDoZJMRE4s-tAt9cK9A6_jP_wTNIdsM.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5d6_So-OAmVVuoF-h-YTKbazuJfisDHAJjcCGxGmc6fBmIo.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Muelle Celestún |
+            <strong>Nombre:</strong> Casa Muelle Celestún I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-gades |
             <strong>Slug:</strong> casa-gades |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 5 Baños | 250 m² | Precio: 1.480.000 € |
@@ -2611,9 +2612,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5b1_OB0_3PhQed_yGtaTQ0UiSSQ9wukcV_gSR_HMdqm7o-M.jpeg" alt="Casa Muelle Celestún - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5bd_c8B4gcpvuHv1TDoZJMRE4s-tAt9cK9A6_jP_wTNIdsM.jpeg" alt="Casa Muelle Celestún - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5d6_So-OAmVVuoF-h-YTKbazuJfisDHAJjcCGxGmc6fBmIo.jpeg" alt="Casa Muelle Celestún - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5b1_OB0_3PhQed_yGtaTQ0UiSSQ9wukcV_gSR_HMdqm7o-M.jpeg" alt="Casa Muelle Celestún I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5bd_c8B4gcpvuHv1TDoZJMRE4s-tAt9cK9A6_jP_wTNIdsM.jpeg" alt="Casa Muelle Celestún I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896ca357f9cc9a8c8e5d6_So-OAmVVuoF-h-YTKbazuJfisDHAJjcCGxGmc6fBmIo.jpeg" alt="Casa Muelle Celestún I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2648,12 +2649,12 @@
     <hr>
 
     <article class="property" id="property-44">
-        <h2>Casa Esmeralda Progreso</h2>
+        <h2>Casa Esmeralda Progreso I</h2>
 
-        <!-- RAG_METADATA: title="Casa Esmeralda Progreso" | url="https://realestate-viviendas.vercel.app/casa-saona" | slug="casa-saona" | specs="VENDIDO | 3 Dormitorios | 4 Baños | 200 m² | Precio: 3.000.000 €" | summary="3 dorm, 4 baños, 200 m², 3.000.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e03_hz-U8qDSbb41lMVUIsIYGX6btyS9FXbXFSKRoKX_KD4.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e09_LXqf9W78ZAQiP7n5ny7r6Eau3jdEP2MvC7MuZpzw-kA.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595d99_vpHpmve6p2n3cjNP5Khia26yDOT45NRACi64Sp36K1o.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Esmeralda Progreso I" | url="https://realestate-viviendas.vercel.app/casa-saona" | slug="casa-saona" | specs="VENDIDO | 3 Dormitorios | 4 Baños | 200 m² | Precio: 3.000.000 €" | summary="3 dorm, 4 baños, 200 m², 3.000.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e03_hz-U8qDSbb41lMVUIsIYGX6btyS9FXbXFSKRoKX_KD4.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e09_LXqf9W78ZAQiP7n5ny7r6Eau3jdEP2MvC7MuZpzw-kA.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595d99_vpHpmve6p2n3cjNP5Khia26yDOT45NRACi64Sp36K1o.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Esmeralda Progreso |
+            <strong>Nombre:</strong> Casa Esmeralda Progreso I |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-saona |
             <strong>Slug:</strong> casa-saona |
             <strong>Specs:</strong> VENDIDO | 3 Dormitorios | 4 Baños | 200 m² | Precio: 3.000.000 € |
@@ -2672,9 +2673,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e03_hz-U8qDSbb41lMVUIsIYGX6btyS9FXbXFSKRoKX_KD4.jpeg" alt="Casa Esmeralda Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e09_LXqf9W78ZAQiP7n5ny7r6Eau3jdEP2MvC7MuZpzw-kA.jpeg" alt="Casa Esmeralda Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595d99_vpHpmve6p2n3cjNP5Khia26yDOT45NRACi64Sp36K1o.jpeg" alt="Casa Esmeralda Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e03_hz-U8qDSbb41lMVUIsIYGX6btyS9FXbXFSKRoKX_KD4.jpeg" alt="Casa Esmeralda Progreso I - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595e09_LXqf9W78ZAQiP7n5ny7r6Eau3jdEP2MvC7MuZpzw-kA.jpeg" alt="Casa Esmeralda Progreso I - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d896dc589396077b595d99_vpHpmve6p2n3cjNP5Khia26yDOT45NRACi64Sp36K1o.jpeg" alt="Casa Esmeralda Progreso I - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -2953,12 +2954,12 @@
     <hr>
 
     <article class="property" id="property-49">
-        <h2>Casa Arena Celestún</h2>
+        <h2>Casa Arena Celestún II</h2>
 
-        <!-- RAG_METADATA: title="Casa Arena Celestún" | url="https://realestate-viviendas.vercel.app/casa-salaro" | slug="casa-salaro" | specs="VENDIDO | 4 Dormitorios | 3 Baños | 161 m² | Precio: 1.320.000 €" | summary="4 dorm, 3 baños, 161 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c29ccbdbe054a897f4_ufWHQnJaiBPpDbcLu5SHJ_jmz5qcenD2Vicy97xsgvo.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89811_VRWMMPoZfSjj1VlwPeDHvPrnm5v8wj0lALijMyriLoY.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89804_CfgpDfWY3DeOndN8GsPeCPytuSx0WHFnOvn7o5YJM9g.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Arena Celestún II" | url="https://realestate-viviendas.vercel.app/casa-salaro" | slug="casa-salaro" | specs="VENDIDO | 4 Dormitorios | 3 Baños | 161 m² | Precio: 1.320.000 €" | summary="4 dorm, 3 baños, 161 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c29ccbdbe054a897f4_ufWHQnJaiBPpDbcLu5SHJ_jmz5qcenD2Vicy97xsgvo.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89811_VRWMMPoZfSjj1VlwPeDHvPrnm5v8wj0lALijMyriLoY.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89804_CfgpDfWY3DeOndN8GsPeCPytuSx0WHFnOvn7o5YJM9g.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Arena Celestún |
+            <strong>Nombre:</strong> Casa Arena Celestún II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-salaro |
             <strong>Slug:</strong> casa-salaro |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 3 Baños | 161 m² | Precio: 1.320.000 € |
@@ -2977,9 +2978,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c29ccbdbe054a897f4_ufWHQnJaiBPpDbcLu5SHJ_jmz5qcenD2Vicy97xsgvo.jpeg" alt="Casa Arena Celestún - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89811_VRWMMPoZfSjj1VlwPeDHvPrnm5v8wj0lALijMyriLoY.jpeg" alt="Casa Arena Celestún - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89804_CfgpDfWY3DeOndN8GsPeCPytuSx0WHFnOvn7o5YJM9g.jpeg" alt="Casa Arena Celestún - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c29ccbdbe054a897f4_ufWHQnJaiBPpDbcLu5SHJ_jmz5qcenD2Vicy97xsgvo.jpeg" alt="Casa Arena Celestún II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89811_VRWMMPoZfSjj1VlwPeDHvPrnm5v8wj0lALijMyriLoY.jpeg" alt="Casa Arena Celestún II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67d897c39ccbdbe054a89804_CfgpDfWY3DeOndN8GsPeCPytuSx0WHFnOvn7o5YJM9g.jpeg" alt="Casa Arena Celestún II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3014,12 +3015,12 @@
     <hr>
 
     <article class="property" id="property-50">
-        <h2>Casa Marea Progreso</h2>
+        <h2>Casa Marea Progreso III</h2>
 
-        <!-- RAG_METADATA: title="Casa Marea Progreso" | url="https://realestate-viviendas.vercel.app/casa-tuna" | slug="casa-tuna" | specs="VENDIDO | 5 Dormitorios | 3 Baños | 120 m² | Precio: 1.120.000 €" | summary="5 dorm, 3 baños, 120 m², 1.120.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3730_5ifXtPT8cycVnfSlt362NHga6eyKEkUOWCbHLDHXl2k.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3758_fa5sLAsOeic8eGm7OEb5Bo1LhJMgIiM4HsBNfYDjMWM.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3776_w9O5tHiilu4WY2Z2FXKXHKIqbssDPA2uo8t0VWqC1rA.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Marea Progreso III" | url="https://realestate-viviendas.vercel.app/casa-tuna" | slug="casa-tuna" | specs="VENDIDO | 5 Dormitorios | 3 Baños | 120 m² | Precio: 1.120.000 €" | summary="5 dorm, 3 baños, 120 m², 1.120.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3730_5ifXtPT8cycVnfSlt362NHga6eyKEkUOWCbHLDHXl2k.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3758_fa5sLAsOeic8eGm7OEb5Bo1LhJMgIiM4HsBNfYDjMWM.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3776_w9O5tHiilu4WY2Z2FXKXHKIqbssDPA2uo8t0VWqC1rA.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Marea Progreso |
+            <strong>Nombre:</strong> Casa Marea Progreso III |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-tuna |
             <strong>Slug:</strong> casa-tuna |
             <strong>Specs:</strong> VENDIDO | 5 Dormitorios | 3 Baños | 120 m² | Precio: 1.120.000 € |
@@ -3038,9 +3039,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3730_5ifXtPT8cycVnfSlt362NHga6eyKEkUOWCbHLDHXl2k.jpeg" alt="Casa Marea Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3758_fa5sLAsOeic8eGm7OEb5Bo1LhJMgIiM4HsBNfYDjMWM.jpeg" alt="Casa Marea Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3776_w9O5tHiilu4WY2Z2FXKXHKIqbssDPA2uo8t0VWqC1rA.jpeg" alt="Casa Marea Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3730_5ifXtPT8cycVnfSlt362NHga6eyKEkUOWCbHLDHXl2k.jpeg" alt="Casa Marea Progreso III - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3758_fa5sLAsOeic8eGm7OEb5Bo1LhJMgIiM4HsBNfYDjMWM.jpeg" alt="Casa Marea Progreso III - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6811f66ab7cfbccd78ba3776_w9O5tHiilu4WY2Z2FXKXHKIqbssDPA2uo8t0VWqC1rA.jpeg" alt="Casa Marea Progreso III - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3075,12 +3076,12 @@
     <hr>
 
     <article class="property" id="property-51">
-        <h2>Casa Duna Chicxulub Puerto</h2>
+        <h2>Casa Duna Chicxulub Puerto II</h2>
 
-        <!-- RAG_METADATA: title="Casa Duna Chicxulub Puerto" | url="https://realestate-viviendas.vercel.app/casa-sidonia" | slug="casa-sidonia" | specs="VENDIDO | 4 Dormitorios | 4 Baños | 239 m² | Precio: 1.560.000 €" | summary="4 dorm, 4 baños, 239 m², 1.560.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5568_9qIy9b__RVpAliG7PVqubJGfQ7LeA2e70u8jedwxito.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5539_IOyklcaD9DQohXl4B8DiMFp5ai-uL-v5X19ReqbM-nE.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5532_D5CP2l19UKgGhX64CM4rvQFDLhE6ufvaIvKGhe-przw.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Duna Chicxulub Puerto II" | url="https://realestate-viviendas.vercel.app/casa-sidonia" | slug="casa-sidonia" | specs="VENDIDO | 4 Dormitorios | 4 Baños | 239 m² | Precio: 1.560.000 €" | summary="4 dorm, 4 baños, 239 m², 1.560.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5568_9qIy9b__RVpAliG7PVqubJGfQ7LeA2e70u8jedwxito.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5539_IOyklcaD9DQohXl4B8DiMFp5ai-uL-v5X19ReqbM-nE.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5532_D5CP2l19UKgGhX64CM4rvQFDLhE6ufvaIvKGhe-przw.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Duna Chicxulub Puerto |
+            <strong>Nombre:</strong> Casa Duna Chicxulub Puerto II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-sidonia |
             <strong>Slug:</strong> casa-sidonia |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 4 Baños | 239 m² | Precio: 1.560.000 € |
@@ -3099,9 +3100,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5568_9qIy9b__RVpAliG7PVqubJGfQ7LeA2e70u8jedwxito.jpeg" alt="Casa Duna Chicxulub Puerto - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5539_IOyklcaD9DQohXl4B8DiMFp5ai-uL-v5X19ReqbM-nE.jpeg" alt="Casa Duna Chicxulub Puerto - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5532_D5CP2l19UKgGhX64CM4rvQFDLhE6ufvaIvKGhe-przw.jpeg" alt="Casa Duna Chicxulub Puerto - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5568_9qIy9b__RVpAliG7PVqubJGfQ7LeA2e70u8jedwxito.jpeg" alt="Casa Duna Chicxulub Puerto II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5539_IOyklcaD9DQohXl4B8DiMFp5ai-uL-v5X19ReqbM-nE.jpeg" alt="Casa Duna Chicxulub Puerto II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68cbccc0f44b93da318e5532_D5CP2l19UKgGhX64CM4rvQFDLhE6ufvaIvKGhe-przw.jpeg" alt="Casa Duna Chicxulub Puerto II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3136,12 +3137,12 @@
     <hr>
 
     <article class="property" id="property-52">
-        <h2>Casa Coral Chelem</h2>
+        <h2>Casa Coral Chelem II</h2>
 
-        <!-- RAG_METADATA: title="Casa Coral Chelem" | url="https://realestate-viviendas.vercel.app/casa-tanau" | slug="casa-tanau" | specs="3 Dormitorios | 2 Baños | 150 m² | Precio: 1.240.000 €" | summary="3 dorm, 2 baños, 150 m², 1.240.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c668_9WWAzvJfMgtT7VVG8d4ckRCfK0N8G23xuMIIwkvomds.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c656_iSDv7vlxKB3yMOl9MaZGgABYovnYhHcwsjJ9plEXDhw.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c676_AZRH9GcDV1Ja8t_vrtcBno0dm9KrPZvfN2w8NYShrvc.png" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Coral Chelem II" | url="https://realestate-viviendas.vercel.app/casa-tanau" | slug="casa-tanau" | specs="3 Dormitorios | 2 Baños | 150 m² | Precio: 1.240.000 €" | summary="3 dorm, 2 baños, 150 m², 1.240.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c668_9WWAzvJfMgtT7VVG8d4ckRCfK0N8G23xuMIIwkvomds.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c656_iSDv7vlxKB3yMOl9MaZGgABYovnYhHcwsjJ9plEXDhw.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c676_AZRH9GcDV1Ja8t_vrtcBno0dm9KrPZvfN2w8NYShrvc.png" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Coral Chelem |
+            <strong>Nombre:</strong> Casa Coral Chelem II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-tanau |
             <strong>Slug:</strong> casa-tanau |
             <strong>Specs:</strong> 3 Dormitorios | 2 Baños | 150 m² | Precio: 1.240.000 € |
@@ -3160,9 +3161,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c668_9WWAzvJfMgtT7VVG8d4ckRCfK0N8G23xuMIIwkvomds.png" alt="Casa Coral Chelem - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c656_iSDv7vlxKB3yMOl9MaZGgABYovnYhHcwsjJ9plEXDhw.png" alt="Casa Coral Chelem - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c676_AZRH9GcDV1Ja8t_vrtcBno0dm9KrPZvfN2w8NYShrvc.png" alt="Casa Coral Chelem - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c668_9WWAzvJfMgtT7VVG8d4ckRCfK0N8G23xuMIIwkvomds.png" alt="Casa Coral Chelem II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c656_iSDv7vlxKB3yMOl9MaZGgABYovnYhHcwsjJ9plEXDhw.png" alt="Casa Coral Chelem II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/68d51d994c9d0860eac0c676_AZRH9GcDV1Ja8t_vrtcBno0dm9KrPZvfN2w8NYShrvc.png" alt="Casa Coral Chelem II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3196,12 +3197,12 @@
     <hr>
 
     <article class="property" id="property-53">
-        <h2>Casa Sal Telchac Puerto</h2>
+        <h2>Casa Sal Telchac Puerto II</h2>
 
-        <!-- RAG_METADATA: title="Casa Sal Telchac Puerto" | url="https://realestate-viviendas.vercel.app/casa-pinere" | slug="casa-pinere" | specs="VENDIDO | 3 Dormitorios | 2 Baños | 95 m² | Precio: 1.400.000 €" | summary="3 dorm, 2 baños, 95 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0c8_dXEbPv5ZkgwJm2eOqNiZf5Nh91n5WI0ESUK070R6Duo.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d8_cUc7SX0Nfm5N06aahKkiMw1i_hBRiIwZXwagc9ITo9E.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d2_2sCDUzF2UC2cLJ6tAhOSJxMH4SjJWfT6gLFHbM_4TH0.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Sal Telchac Puerto II" | url="https://realestate-viviendas.vercel.app/casa-pinere" | slug="casa-pinere" | specs="VENDIDO | 3 Dormitorios | 2 Baños | 95 m² | Precio: 1.400.000 €" | summary="3 dorm, 2 baños, 95 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0c8_dXEbPv5ZkgwJm2eOqNiZf5Nh91n5WI0ESUK070R6Duo.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d8_cUc7SX0Nfm5N06aahKkiMw1i_hBRiIwZXwagc9ITo9E.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d2_2sCDUzF2UC2cLJ6tAhOSJxMH4SjJWfT6gLFHbM_4TH0.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Sal Telchac Puerto |
+            <strong>Nombre:</strong> Casa Sal Telchac Puerto II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-pinere |
             <strong>Slug:</strong> casa-pinere |
             <strong>Specs:</strong> VENDIDO | 3 Dormitorios | 2 Baños | 95 m² | Precio: 1.400.000 € |
@@ -3220,9 +3221,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0c8_dXEbPv5ZkgwJm2eOqNiZf5Nh91n5WI0ESUK070R6Duo.jpeg" alt="Casa Sal Telchac Puerto - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d8_cUc7SX0Nfm5N06aahKkiMw1i_hBRiIwZXwagc9ITo9E.jpeg" alt="Casa Sal Telchac Puerto - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d2_2sCDUzF2UC2cLJ6tAhOSJxMH4SjJWfT6gLFHbM_4TH0.jpeg" alt="Casa Sal Telchac Puerto - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0c8_dXEbPv5ZkgwJm2eOqNiZf5Nh91n5WI0ESUK070R6Duo.jpeg" alt="Casa Sal Telchac Puerto II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d8_cUc7SX0Nfm5N06aahKkiMw1i_hBRiIwZXwagc9ITo9E.jpeg" alt="Casa Sal Telchac Puerto II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6893761f10d1bba4fc32d0d2_2sCDUzF2UC2cLJ6tAhOSJxMH4SjJWfT6gLFHbM_4TH0.jpeg" alt="Casa Sal Telchac Puerto II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3257,12 +3258,12 @@
     <hr>
 
     <article class="property" id="property-54">
-        <h2>Casa Horizonte Sisal</h2>
+        <h2>Casa Horizonte Sisal II</h2>
 
-        <!-- RAG_METADATA: title="Casa Horizonte Sisal" | url="https://realestate-viviendas.vercel.app/casa-arnica" | slug="casa-arnica" | specs="VENDIDO | 4 Dormitorios | 3 Baños | 153 m² | Precio: 920.000 €" | summary="4 dorm, 3 baños, 153 m², 920.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3c_w163zHgGE9hidDTTmPLNIx6wVD_RrYQcNHctRUNV228.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3f_qMrDJopaVyHMQ_k2OAhvaQvz15Q9w2yPNzUqbsMUjw0.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425a596253a0ddc81b38_qJdqIhKGoOdC3jPWEaVQJWLD3Sp_JRlgTFXWifni1rw.png" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Horizonte Sisal II" | url="https://realestate-viviendas.vercel.app/casa-arnica" | slug="casa-arnica" | specs="VENDIDO | 4 Dormitorios | 3 Baños | 153 m² | Precio: 920.000 €" | summary="4 dorm, 3 baños, 153 m², 920.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3c_w163zHgGE9hidDTTmPLNIx6wVD_RrYQcNHctRUNV228.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3f_qMrDJopaVyHMQ_k2OAhvaQvz15Q9w2yPNzUqbsMUjw0.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425a596253a0ddc81b38_qJdqIhKGoOdC3jPWEaVQJWLD3Sp_JRlgTFXWifni1rw.png" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Horizonte Sisal |
+            <strong>Nombre:</strong> Casa Horizonte Sisal II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-arnica |
             <strong>Slug:</strong> casa-arnica |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 3 Baños | 153 m² | Precio: 920.000 € |
@@ -3281,9 +3282,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3c_w163zHgGE9hidDTTmPLNIx6wVD_RrYQcNHctRUNV228.png" alt="Casa Horizonte Sisal - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3f_qMrDJopaVyHMQ_k2OAhvaQvz15Q9w2yPNzUqbsMUjw0.png" alt="Casa Horizonte Sisal - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425a596253a0ddc81b38_qJdqIhKGoOdC3jPWEaVQJWLD3Sp_JRlgTFXWifni1rw.png" alt="Casa Horizonte Sisal - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3c_w163zHgGE9hidDTTmPLNIx6wVD_RrYQcNHctRUNV228.png" alt="Casa Horizonte Sisal II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a3f_qMrDJopaVyHMQ_k2OAhvaQvz15Q9w2yPNzUqbsMUjw0.png" alt="Casa Horizonte Sisal II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425a596253a0ddc81b38_qJdqIhKGoOdC3jPWEaVQJWLD3Sp_JRlgTFXWifni1rw.png" alt="Casa Horizonte Sisal II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3318,12 +3319,12 @@
     <hr>
 
     <article class="property" id="property-55">
-        <h2>Casa Muelle Celestún</h2>
+        <h2>Casa Muelle Celestún II</h2>
 
-        <!-- RAG_METADATA: title="Casa Muelle Celestún" | url="https://realestate-viviendas.vercel.app/casa-artiga" | slug="casa-artiga" | specs="VENDIDO | 4 Dormitorios | 4 Baños | 175 m² | Precio: 1.040.000 €" | summary="4 dorm, 4 baños, 175 m², 1.040.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a39_izpysDo5qm-XyyiY-OhqsTzndzHkEoUrCDdamlgyxIY.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d41_fqaLN3xIwWOcGwVeajvKIi6G0g7KQS8LWabDrXa7SdY.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d48_fVq7f9-UaP_N1OJmEhRkGvBb2Kok-IBRJcrsPWjcJqk.png" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Muelle Celestún II" | url="https://realestate-viviendas.vercel.app/casa-artiga" | slug="casa-artiga" | specs="VENDIDO | 4 Dormitorios | 4 Baños | 175 m² | Precio: 1.040.000 €" | summary="4 dorm, 4 baños, 175 m², 1.040.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a39_izpysDo5qm-XyyiY-OhqsTzndzHkEoUrCDdamlgyxIY.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d41_fqaLN3xIwWOcGwVeajvKIi6G0g7KQS8LWabDrXa7SdY.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d48_fVq7f9-UaP_N1OJmEhRkGvBb2Kok-IBRJcrsPWjcJqk.png" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Muelle Celestún |
+            <strong>Nombre:</strong> Casa Muelle Celestún II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-artiga |
             <strong>Slug:</strong> casa-artiga |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 4 Baños | 175 m² | Precio: 1.040.000 € |
@@ -3342,9 +3343,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a39_izpysDo5qm-XyyiY-OhqsTzndzHkEoUrCDdamlgyxIY.png" alt="Casa Muelle Celestún - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d41_fqaLN3xIwWOcGwVeajvKIi6G0g7KQS8LWabDrXa7SdY.png" alt="Casa Muelle Celestún - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d48_fVq7f9-UaP_N1OJmEhRkGvBb2Kok-IBRJcrsPWjcJqk.png" alt="Casa Muelle Celestún - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc4259596253a0ddc81a39_izpysDo5qm-XyyiY-OhqsTzndzHkEoUrCDdamlgyxIY.png" alt="Casa Muelle Celestún II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d41_fqaLN3xIwWOcGwVeajvKIi6G0g7KQS8LWabDrXa7SdY.png" alt="Casa Muelle Celestún II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/67dc425f8031a190940e8d48_fVq7f9-UaP_N1OJmEhRkGvBb2Kok-IBRJcrsPWjcJqk.png" alt="Casa Muelle Celestún II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3379,12 +3380,12 @@
     <hr>
 
     <article class="property" id="property-56">
-        <h2>Casa Esmeralda Progreso</h2>
+        <h2>Casa Esmeralda Progreso II</h2>
 
-        <!-- RAG_METADATA: title="Casa Esmeralda Progreso" | url="https://realestate-viviendas.vercel.app/casa-numa" | slug="casa-numa" | specs="VENDIDO | 5 Dormitorios | 4 Baños | 377 m² | Precio: 1.520.000 €" | summary="5 dorm, 4 baños, 377 m², 1.520.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0c2cd1235fc705f191_rsyGDNFnQpiuZ2Q2NBjFkGISHYH6OOR23La9O6gZ7YM.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1b4_nET3N7dHU1Drn6ddWo_zqQz-afhZrCKCRHGU6qdgR4E.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1ca_-sEai4XS6T26Lyzt5D1YLLZplHnWcGlhOv-oOO6Z-dc.png" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Esmeralda Progreso II" | url="https://realestate-viviendas.vercel.app/casa-numa" | slug="casa-numa" | specs="VENDIDO | 5 Dormitorios | 4 Baños | 377 m² | Precio: 1.520.000 €" | summary="5 dorm, 4 baños, 377 m², 1.520.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0c2cd1235fc705f191_rsyGDNFnQpiuZ2Q2NBjFkGISHYH6OOR23La9O6gZ7YM.png" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1b4_nET3N7dHU1Drn6ddWo_zqQz-afhZrCKCRHGU6qdgR4E.png" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1ca_-sEai4XS6T26Lyzt5D1YLLZplHnWcGlhOv-oOO6Z-dc.png" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Esmeralda Progreso |
+            <strong>Nombre:</strong> Casa Esmeralda Progreso II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-numa |
             <strong>Slug:</strong> casa-numa |
             <strong>Specs:</strong> VENDIDO | 5 Dormitorios | 4 Baños | 377 m² | Precio: 1.520.000 € |
@@ -3403,9 +3404,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0c2cd1235fc705f191_rsyGDNFnQpiuZ2Q2NBjFkGISHYH6OOR23La9O6gZ7YM.png" alt="Casa Esmeralda Progreso - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1b4_nET3N7dHU1Drn6ddWo_zqQz-afhZrCKCRHGU6qdgR4E.png" alt="Casa Esmeralda Progreso - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1ca_-sEai4XS6T26Lyzt5D1YLLZplHnWcGlhOv-oOO6Z-dc.png" alt="Casa Esmeralda Progreso - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0c2cd1235fc705f191_rsyGDNFnQpiuZ2Q2NBjFkGISHYH6OOR23La9O6gZ7YM.png" alt="Casa Esmeralda Progreso II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1b4_nET3N7dHU1Drn6ddWo_zqQz-afhZrCKCRHGU6qdgR4E.png" alt="Casa Esmeralda Progreso II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/69777b0e2cd1235fc705f1ca_-sEai4XS6T26Lyzt5D1YLLZplHnWcGlhOv-oOO6Z-dc.png" alt="Casa Esmeralda Progreso II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3440,12 +3441,12 @@
     <hr>
 
     <article class="property" id="property-57">
-        <h2>Casa Hoyo18 Country</h2>
+        <h2>Casa Hoyo18 Country III</h2>
 
-        <!-- RAG_METADATA: title="Casa Hoyo18 Country" | url="https://realestate-viviendas.vercel.app/casa-taula" | slug="casa-taula" | specs="VENDIDO | 4 Dormitorios | 4 Baños | 180 m² | Precio: 1.320.000 €" | summary="4 dorm, 4 baños, 180 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906288e7247b3a646cae_MS-1x_qanWwN8cLk_W9D2JIE4K1V7bh4IT9sjdC59XM.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d56___aLaYmXT9YdBs0PNJS7mVOGOkc34JoLFDA_DluF1EY.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d53_yxdtMLJrvpRQo5Ta4EEeo8CNLVPToB1H6mBdFAhWpO0.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Hoyo18 Country III" | url="https://realestate-viviendas.vercel.app/casa-taula" | slug="casa-taula" | specs="VENDIDO | 4 Dormitorios | 4 Baños | 180 m² | Precio: 1.320.000 €" | summary="4 dorm, 4 baños, 180 m², 1.320.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906288e7247b3a646cae_MS-1x_qanWwN8cLk_W9D2JIE4K1V7bh4IT9sjdC59XM.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d56___aLaYmXT9YdBs0PNJS7mVOGOkc34JoLFDA_DluF1EY.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d53_yxdtMLJrvpRQo5Ta4EEeo8CNLVPToB1H6mBdFAhWpO0.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Hoyo18 Country |
+            <strong>Nombre:</strong> Casa Hoyo18 Country III |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-taula |
             <strong>Slug:</strong> casa-taula |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 4 Baños | 180 m² | Precio: 1.320.000 € |
@@ -3464,9 +3465,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906288e7247b3a646cae_MS-1x_qanWwN8cLk_W9D2JIE4K1V7bh4IT9sjdC59XM.jpeg" alt="Casa Hoyo18 Country - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d56___aLaYmXT9YdBs0PNJS7mVOGOkc34JoLFDA_DluF1EY.jpeg" alt="Casa Hoyo18 Country - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d53_yxdtMLJrvpRQo5Ta4EEeo8CNLVPToB1H6mBdFAhWpO0.jpeg" alt="Casa Hoyo18 Country - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906288e7247b3a646cae_MS-1x_qanWwN8cLk_W9D2JIE4K1V7bh4IT9sjdC59XM.jpeg" alt="Casa Hoyo18 Country III - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d56___aLaYmXT9YdBs0PNJS7mVOGOkc34JoLFDA_DluF1EY.jpeg" alt="Casa Hoyo18 Country III - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6818906388e7247b3a646d53_yxdtMLJrvpRQo5Ta4EEeo8CNLVPToB1H6mBdFAhWpO0.jpeg" alt="Casa Hoyo18 Country III - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
@@ -3501,12 +3502,12 @@
     <hr>
 
     <article class="property" id="property-58">
-        <h2>Casa Club Country</h2>
+        <h2>Casa Club Country II</h2>
 
-        <!-- RAG_METADATA: title="Casa Club Country" | url="https://realestate-viviendas.vercel.app/casa-solera" | slug="casa-solera" | specs="VENDIDO | 4 Dormitorios | 5 Baños | 181 m² | Precio: 1.400.000 €" | summary="4 dorm, 5 baños, 181 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3528b_YStAF6wLF638El9Xgq-MMs9rsBpSv_Wo9sH7954W7a8.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3529e_NAmOBEUXPKm3RfYf_U806vJL1eUE0B37kbkp8aYCH-Y.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d35293_UVKgPW8yEgHL-wb9mVg5W5qcppn3Y37H1KCli-znuD0.jpeg" | images_count="3" -->
+        <!-- RAG_METADATA: title="Casa Club Country II" | url="https://realestate-viviendas.vercel.app/casa-solera" | slug="casa-solera" | specs="VENDIDO | 4 Dormitorios | 5 Baños | 181 m² | Precio: 1.400.000 €" | summary="4 dorm, 5 baños, 181 m², 1.400.000 €" | image="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3528b_YStAF6wLF638El9Xgq-MMs9rsBpSv_Wo9sH7954W7a8.jpeg" | image_2="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3529e_NAmOBEUXPKm3RfYf_U806vJL1eUE0B37kbkp8aYCH-Y.jpeg" | image_3="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d35293_UVKgPW8yEgHL-wb9mVg5W5qcppn3Y37H1KCli-znuD0.jpeg" | images_count="3" -->
 
         <div class="property-meta">
-            <strong>Nombre:</strong> Casa Club Country |
+            <strong>Nombre:</strong> Casa Club Country II |
             <strong>URL:</strong> https://realestate-viviendas.vercel.app/casa-solera |
             <strong>Slug:</strong> casa-solera |
             <strong>Specs:</strong> VENDIDO | 4 Dormitorios | 5 Baños | 181 m² | Precio: 1.400.000 € |
@@ -3525,9 +3526,9 @@
         </div>
 
         <div class="property-images">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3528b_YStAF6wLF638El9Xgq-MMs9rsBpSv_Wo9sH7954W7a8.jpeg" alt="Casa Club Country - Imagen 1" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3529e_NAmOBEUXPKm3RfYf_U806vJL1eUE0B37kbkp8aYCH-Y.jpeg" alt="Casa Club Country - Imagen 2" loading="lazy">
-            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d35293_UVKgPW8yEgHL-wb9mVg5W5qcppn3Y37H1KCli-znuD0.jpeg" alt="Casa Club Country - Imagen 3" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3528b_YStAF6wLF638El9Xgq-MMs9rsBpSv_Wo9sH7954W7a8.jpeg" alt="Casa Club Country II - Imagen 1" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d3529e_NAmOBEUXPKm3RfYf_U806vJL1eUE0B37kbkp8aYCH-Y.jpeg" alt="Casa Club Country II - Imagen 2" loading="lazy">
+            <img src="https://cdn.prod.website-files.com/65b8f2e12ad31cfeaf4a3080/6880ace1ebb5dc6b72d35293_UVKgPW8yEgHL-wb9mVg5W5qcppn3Y37H1KCli-znuD0.jpeg" alt="Casa Club Country II - Imagen 3" loading="lazy">
         </div>
 
         <div class="property-specs">
