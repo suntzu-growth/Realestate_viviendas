@@ -30,7 +30,7 @@ export default function Home() {
             <div className="flex items-center gap-4 mb-8">
               <div className="w-8 h-px bg-[var(--accent)]"></div>
               <span className="text-[0.65rem] font-semibold tracking-[0.45em] uppercase text-[var(--accent)]">
-                Exclusive Real Estate · España
+                Exclusive Real Estate · Yucatán
               </span>
             </div>
 
@@ -39,14 +39,14 @@ export default function Home() {
               El arte de vivir<br />
               en el{' '}
               <em className="italic font-light" style={{ color: 'var(--accent)' }}>
-                Mediterráneo
+                Yucatán
               </em>
             </h1>
 
             {/* Subhead + CTA row */}
             <div className="flex flex-col md:flex-row md:items-end gap-10 md:gap-20">
               <p className="text-base text-white/70 max-w-md font-light leading-relaxed">
-                Curamos las propiedades más excepcionales en las ubicaciones más prestigiosas de España para quienes buscan algo verdaderamente extraordinario.
+                Curamos las propiedades más excepcionales en las ubicaciones más prestigiosas de Yucatán para quienes buscan algo verdaderamente extraordinario.
               </p>
               <div className="flex flex-row gap-4 shrink-0">
                 <a href="#catalog" className="btn btn-accent px-8 py-3.5">
@@ -63,7 +63,7 @@ export default function Home() {
           <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-3 gap-8 max-w-lg">
             {[
               { value: `${propertiesData.length}`, label: 'Propiedades' },
-              { value: '4', label: 'Destinos' },
+              { value: '7', label: 'Destinos' },
               { value: '€1M+', label: 'Precio desde' },
             ].map(({ value, label }) => (
               <div key={label}>
@@ -150,7 +150,7 @@ export default function Home() {
                   {
                     num: '01',
                     title: 'Prime Locations',
-                    body: 'Menorca, Ibiza, Madrid y Cantabria.',
+                    body: 'Mérida, Progreso, Chicxulub Puerto, Chelem, Telchac, Sisal y Celestún.',
                   },
                   {
                     num: '02',

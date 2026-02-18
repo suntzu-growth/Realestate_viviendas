@@ -70,7 +70,7 @@ export default function RootLayout({
                   </span>
                 </div>
                 <p className="footer-muted text-sm leading-relaxed max-w-xs font-light">
-                  Curando las propiedades más excepcionales en las ubicaciones más prestigiosas de la costa española y Madrid.
+                  Curando las propiedades más excepcionales en las ubicaciones más prestigiosas de Yucatán, México.
                 </p>
                 {/* Decorative line */}
                 <div className="mt-10 flex gap-3 items-center">
@@ -83,7 +83,7 @@ export default function RootLayout({
               <div className="md:col-span-3 md:col-start-7">
                 <h4 className="footer-muted text-[0.6rem] font-bold tracking-[0.3em] uppercase mb-8">Navegación</h4>
                 <ul className="space-y-5">
-                  {['Catálogo Completo', 'Menorca Selection', 'Ibiza Luxury', 'Madrid Prime'].map((item) => (
+                  {['Catálogo Completo', 'Mérida', 'Progreso', 'Sisal & Celestún'].map((item) => (
                     <li key={item}>
                       <a href="#" className="footer-link text-[0.7rem] font-medium tracking-wider uppercase">
                         {item}
@@ -103,7 +103,7 @@ export default function RootLayout({
                   <a href="tel:+34912345678" className="footer-link block text-sm font-light">
                     +34 912 345 678
                   </a>
-                  <p className="footer-muted text-sm font-light pt-2">Madrid, España</p>
+                  <p className="footer-muted text-sm font-light pt-2">Mérida, Yucatán</p>
                 </div>
               </div>
             </div>
