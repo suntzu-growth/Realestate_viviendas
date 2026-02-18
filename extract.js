@@ -4,6 +4,18 @@ const path = require('path');
 const htmlPath = path.join(__dirname, 'propiedades-suntzu-yucatan-v6.html');
 let html = fs.readFileSync(htmlPath, 'utf8');
 
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-');
+}
+
 const propertyRegex = /<article class="property" id="property-(\d+)">([\s\S]*?)<\/article>/g;
 const titleRegex = /<h2>(.*?)<\/h2>/;
 const refRegex = /Referencia:<\/strong>\s*([\w-]+)/;
@@ -20,7 +32,7 @@ while ((match = propertyRegex.exec(html)) !== null) {
   const content = match[2];
 
   const title = titleRegex.exec(content)?.[1] || '';
-  const slug = refRegex.exec(content)?.[1] || `property-${propertyId}`;
+  const slug = slugify(title);
   const specs = specsRegex.exec(content)?.[1]?.replace(/\n/g, '').trim() || '';
   const description = descRegex.exec(content)?.[1]?.trim() || '';
 
@@ -47,11 +59,8 @@ while ((match = propertyRegex.exec(html)) !== null) {
     originalUrl: `https://www.vivla.com/es/listings/${slug}`
   });
 
-  // Update HTML: Use internal slug for link
-  // Target the existing link (whether it's the original or a previous modification)
-  // Our previous modification used: <a href="${location}" class="property-url" target="_blank">Ver Detalles Completos →</a>
-  // OR the original Vivla one. 
-  // We'll use a broad regex to catch anything that looks like the property link.
+  // Update HTML: Use absolute Vercel link with name-based slug
+  // Target the existing link (whether it's the original, a relative link, or an address)
   const linkRegex = /<a [^>]*class="property-url"[^>]*>.*?<\/a>/;
 
   // Replace only within this specific property's content in the updatedHtml
@@ -61,8 +70,8 @@ while ((match = propertyRegex.exec(html)) !== null) {
     const endIndex = updatedHtml.indexOf('</article>', startIndex) + 10;
     let propertyHtml = updatedHtml.substring(startIndex, endIndex);
 
-    // The internal URL should be the slug (e.g., /casa-son-parc)
-    const newLink = `<a href="/${slug}" class="property-url" target="_blank">Ver Detalles Completos →</a>`;
+    const absoluteUrl = `https://realestate-viviendas.vercel.app/${slug}`;
+    const newLink = `<a href="${absoluteUrl}" class="property-url" target="_blank">Ver Detalles Completos →</a>`;
     propertyHtml = propertyHtml.replace(linkRegex, newLink);
 
     updatedHtml = updatedHtml.substring(0, startIndex) + propertyHtml + updatedHtml.substring(endIndex);
