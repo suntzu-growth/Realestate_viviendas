@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd scrape.js: HTML-to-JSON parser for property catalog updates\n\nUsage: node scrape.js <path-to-html>\nParses property articles from scraping HTML and regenerates src/data/properties.json\nwith title, slug, specs, description, images and originalUrl.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(node:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

@@ -66,22 +66,22 @@ while ((match = propertyRegex.exec(html)) !== null) {
     originalUrl: `https://www.vivla.com/es/listings/${vivlaSlug}`
   });
 
-  // Update HTML: Replace URL with location (if not already done)
-  // Note: Since we already modified the HTML in the previous step, we might need to be careful.
-  // But the previous step replaced it with: href="#" data-address="${location}" ... Ver Detalles Completos →
-
-  // If we want the HTML to show the address instead of "Ver Detalles...", let's ensure it's correct.
+  // Update HTML: Replace URL and Text with location
   if (location) {
-    // This regex looks for either the old Vivla link or the new placeholder link
-    // We need to use the vivlaSlug here to target the specific original link
-    const urlPattern = new RegExp(`href="https:\\/\\/www\\.vivla\\.com\\/es\\/listings\\/${vivlaSlug}"`, 'g');
-    updatedHtml = updatedHtml.replace(urlPattern, `href="#" data-address="${location}" title="${location}" onclick="alert('${location}'); return false;"`);
+    // Escape dots and other characters in vivlaSlug for regex
+    const escapedSlug = vivlaSlug.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 
-    // Let's replace the link text and href.
-    // This regex needs to be robust enough to catch the original link text or the already modified one.
-    // We'll target the original "Ver Detalles Completos →" text associated with the Vivla URL.
-    const linkRegex = new RegExp(`(<a href=")https:\\/\\/www\\.vivla\\.com\\/es\\/listings\\/${vivlaSlug}(" class="property-url" target="_blank">)Ver Detalles Completos →(<\\/a>)`, 'g');
-    updatedHtml = updatedHtml.replace(linkRegex, `$1#$2${location}$3`);
+    // This regex targets the original link structure
+    const fullLinkRegex = new RegExp(`<a href="https:\\/\\/www\\.vivla\\.com\\/es\\/listings\\/${escapedSlug}" class="property-url" target="_blank">Ver Detalles Completos →<\\/a>`, 'g');
+
+    // Replace with a simple span or a link that shows the address
+    const newElement = `<a href="#" class="property-url" data-address="${location}" onclick="alert('${location}'); return false;">${location}</a>`;
+
+    updatedHtml = updatedHtml.replace(fullLinkRegex, newElement);
+
+    // Fallback: If it was already partially replaced (e.g. href="#"), target the remaining text
+    const partialLinkRegex = new RegExp(`href="#" data-address="${location.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')}"[^>]*>Ver Detalles Completos →<\\/a>`, 'g');
+    updatedHtml = updatedHtml.replace(partialLinkRegex, `href="#" data-address="${location}" onclick="alert('${location}'); return false;">${location}</a>`);
   }
 }
 
