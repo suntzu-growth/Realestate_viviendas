@@ -19,6 +19,7 @@ const YUCATAN_HTML = 'C:/Users/matya/Downloads/propiedades-suntzu-yucatan-v2.htm
 const PROPERTIES_JSON = path.join(__dirname, 'src', 'data', 'properties.json');
 const OUTPUT_DIR = path.join(__dirname, 'data', 'rag');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'propiedades-suntzu-yucatan.html');
+const VERCEL_BASE = 'https://realestate-viviendas.vercel.app';
 
 // --- Cargar datos ---
 const yucHtml = fs.readFileSync(YUCATAN_HTML, 'utf-8');
@@ -95,7 +96,9 @@ function makeSummary(specsRaw) {
 }
 
 // --- Generar HTML de cada propiedad ---
-function buildArticle(yuc, images) {
+function buildArticle(yuc, images, vercelSlug) {
+  // URL de nuestra web de Vercel (donde realmente existe la página)
+  const vercelUrl = `${VERCEL_BASE}/${vercelSlug}`;
   const specsText = formatSpecs(yuc.specs);
   const summary = makeSummary(yuc.specs);
   const parsed = parseSpecsText(yuc.specs);
@@ -135,13 +138,20 @@ function buildArticle(yuc, images) {
     <article class="property" id="property-${yuc.id}">
         <h2>${yuc.title}</h2>
 
-        <!-- RAG_METADATA: title="${yuc.title}" | url="${yuc.href}" | slug="${yuc.slug}" | specs="${specsText}" | summary="${summary}" | image="${images[0] || ''}" | images_count="${images.length}" -->
+        <!-- RAG_METADATA: title="${yuc.title}" | url="${vercelUrl}" | slug="${vercelSlug}" | specs="${specsText}" | summary="${summary}" | image="${images[0] || ''}" | image_2="${images[1] || ''}" | image_3="${images[2] || ''}" | images_count="${images.length}" -->
 
         <div class="property-meta">
             <strong>Nombre:</strong> ${yuc.title} |
-            <strong>URL:</strong> ${yuc.href} |
-            <strong>Slug:</strong> ${yuc.slug} |
+            <strong>URL:</strong> ${vercelUrl} |
+            <strong>Slug:</strong> ${vercelSlug} |
+            <strong>Specs:</strong> ${specsText} |
             <strong>Categoría:</strong> inmobiliaria
+        </div>
+
+        <div class="property-quick-ref">
+            IMAGEN_1: ${images[0] || ''} |
+            IMAGEN_2: ${images[1] || ''} |
+            IMAGEN_3: ${images[2] || ''}
         </div>
 
         <div class="property-rag-images-index">
@@ -176,7 +186,7 @@ ${uniqueSection ? `
             <p>${locationSection}</p>
         </div>
 ` : ''}
-        <a href="${yuc.href}" class="property-url" target="_blank">Ver propiedad en Ceiba Prime →</a>
+        <a href="${vercelUrl}" class="property-url" target="_blank">Ver propiedad →</a>
     </article>`;
 }
 
@@ -191,10 +201,11 @@ function main() {
 
   const now = new Date().toISOString();
   const articlesHtml = yucArticles.map((yuc, i) => {
-    // Asignar imágenes cíclicamente desde properties.json (cualquier imagen sirve, es ficticio)
+    // Asignar imágenes y slug de Vercel 1:1 desde properties.json
     const prop = properties[i % properties.length];
     const images = prop.images || [];
-    return buildArticle(yuc, images);
+    const vercelSlug = prop.slug; // slug real de nuestra web
+    return buildArticle(yuc, images, vercelSlug);
   }).join('\n    <hr>\n');
 
   const html = `<!DOCTYPE html>
@@ -228,7 +239,7 @@ function main() {
     <div class="summary-box">
         <p><strong>Total de propiedades:</strong> ${yucArticles.length}</p>
         <p><strong>Última actualización:</strong> ${now}</p>
-        <p><strong>Fuente:</strong> https://demo.ceibaprime.mx</p>
+        <p><strong>Fuente:</strong> https://realestate-viviendas.vercel.app</p>
         <p><strong>Destinos:</strong> Mérida, Progreso, Chicxulub Puerto, Chelem, Telchac Puerto, Sisal, Celestún</p>
     </div>
     <hr>
