@@ -112,9 +112,13 @@ function propertyToHtml(property, index) {
   const locationSection = extractLocation(property.description);
   const propertyUrl = `${BASE_URL}/${property.slug}`;
 
-  const imagesHtml = (property.images || [])
+  const images = property.images || [];
+  const imagesHtml = images
     .map((img, i) => `            <img src="${img}" alt="${property.title} - Imagen ${i + 1}" loading="lazy">`)
     .join('\n');
+
+  // Bloque de imágenes compacto para RAG (todas las URLs en una sola línea, fácil de capturar en un chunk)
+  const imagesSummary = images.map((img, i) => `image_${i + 1}: ${img}`).join(' | ');
 
   const specsDetailHtml = [
     parsed.dormitorios ? `<span class="spec-item"><strong>🛏 Dormitorios:</strong> ${parsed.dormitorios}</span>` : '',
@@ -127,10 +131,18 @@ function propertyToHtml(property, index) {
     <article class="property" id="property-${property.id}">
         <h2>${property.title}</h2>
 
+        <!-- RAG_METADATA: title="${property.title}" | url="${propertyUrl}" | slug="${property.slug}" | specs="${specsText}" | image="${images[0] || ''}" | images_count="${images.length}" -->
+
         <div class="property-meta">
-            <strong>ID:</strong> ${property.id} |
+            <strong>Nombre:</strong> ${property.title} |
+            <strong>URL:</strong> ${propertyUrl} |
             <strong>Slug:</strong> ${property.slug} |
             <strong>Categoría:</strong> inmobiliaria
+        </div>
+
+        <div class="property-rag-images-index">
+            <strong>🖼 URLs de imágenes (EXTRAER EXACTAS para displayPropertyResults):</strong><br>
+            ${imagesSummary}
         </div>
 
         <div class="property-images">
