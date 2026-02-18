@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const htmlPath = path.join(__dirname, 'propiedades-suntzu-yucatan-v6.html');
+const htmlPath = path.join(__dirname, 'propiedades-suntzu-yucatan-v7.html');
 let html = fs.readFileSync(htmlPath, 'utf8');
 
 function slugify(text) {
@@ -60,10 +60,9 @@ while ((match = propertyRegex.exec(html)) !== null) {
   });
 
   // Update HTML: Use absolute Vercel link with name-based slug
-  // Target the existing link (whether it's the original, a relative link, or an address)
   const linkRegex = /<a [^>]*class="property-url"[^>]*>.*?<\/a>/;
 
-  // Replace only within this specific property's content in the updatedHtml
+  // Find property in updatedHtml
   const propertyToFind = `<article class="property" id="property-${propertyId}">`;
   const startIndex = updatedHtml.indexOf(propertyToFind);
   if (startIndex !== -1) {
@@ -73,6 +72,12 @@ while ((match = propertyRegex.exec(html)) !== null) {
     const absoluteUrl = `https://realestate-viviendas.vercel.app/${slug}`;
     const newLink = `<a href="${absoluteUrl}" class="property-url" target="_blank">Ver Detalles Completos →</a>`;
     propertyHtml = propertyHtml.replace(linkRegex, newLink);
+
+    // REMOVE property-ref if present to look exactly like the reference
+    propertyHtml = propertyHtml.replace(/<div class="property-ref">.*?<\/div>/s, '');
+
+    // REMOVE any leaked RAG_METADATA
+    propertyHtml = propertyHtml.replace(/<!-- RAG_METADATA:.*? -->/g, '');
 
     updatedHtml = updatedHtml.substring(0, startIndex) + propertyHtml + updatedHtml.substring(endIndex);
   }
@@ -86,4 +91,4 @@ if (!fs.existsSync(dataDir)) {
 }
 
 fs.writeFileSync(path.join(dataDir, 'properties.json'), JSON.stringify(properties, null, 2));
-console.log(`Updated ${properties.length} properties. HTML links now point to internal slugs.`);
+console.log(`Updated ${properties.length} properties. v7.html now looks exactly like the reference but with correct URLs.`);
