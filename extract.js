@@ -47,24 +47,25 @@ while ((match = propertyRegex.exec(html)) !== null) {
     originalUrl: `https://www.vivla.com/es/listings/${slug}`
   });
 
-  // Update HTML: Minimal replacement
-  if (location) {
-    // Target the existing link (whether it's the original or my previous modification)
-    const linkRegex = /<a href="(?:https:\/\/www\.vivla\.com\/es\/listings\/[\w-]+|#)"[^>]*>.*?<\/a>/;
+  // Update HTML: Use internal slug for link
+  // Target the existing link (whether it's the original or a previous modification)
+  // Our previous modification used: <a href="${location}" class="property-url" target="_blank">Ver Detalles Completos →</a>
+  // OR the original Vivla one. 
+  // We'll use a broad regex to catch anything that looks like the property link.
+  const linkRegex = /<a [^>]*class="property-url"[^>]*>.*?<\/a>/;
 
-    // Replace only within this specific property's content in the updatedHtml
-    // First, find where this property is in the new HTML
-    const propertyToFind = `<article class="property" id="property-${propertyId}">`;
-    const startIndex = updatedHtml.indexOf(propertyToFind);
-    if (startIndex !== -1) {
-      const endIndex = updatedHtml.indexOf('</article>', startIndex) + 10;
-      let propertyHtml = updatedHtml.substring(startIndex, endIndex);
+  // Replace only within this specific property's content in the updatedHtml
+  const propertyToFind = `<article class="property" id="property-${propertyId}">`;
+  const startIndex = updatedHtml.indexOf(propertyToFind);
+  if (startIndex !== -1) {
+    const endIndex = updatedHtml.indexOf('</article>', startIndex) + 10;
+    let propertyHtml = updatedHtml.substring(startIndex, endIndex);
 
-      const newLink = `<a href="${location}" class="property-url" target="_blank">Ver Detalles Completos →</a>`;
-      propertyHtml = propertyHtml.replace(linkRegex, newLink);
+    // The internal URL should be the slug (e.g., /casa-son-parc)
+    const newLink = `<a href="/${slug}" class="property-url" target="_blank">Ver Detalles Completos →</a>`;
+    propertyHtml = propertyHtml.replace(linkRegex, newLink);
 
-      updatedHtml = updatedHtml.substring(0, startIndex) + propertyHtml + updatedHtml.substring(endIndex);
-    }
+    updatedHtml = updatedHtml.substring(0, startIndex) + propertyHtml + updatedHtml.substring(endIndex);
   }
 }
 
@@ -76,4 +77,4 @@ if (!fs.existsSync(dataDir)) {
 }
 
 fs.writeFileSync(path.join(dataDir, 'properties.json'), JSON.stringify(properties, null, 2));
-console.log(`Updated ${properties.length} properties. HTML URLs replaced with addresses.`);
+console.log(`Updated ${properties.length} properties. HTML links now point to internal slugs.`);
