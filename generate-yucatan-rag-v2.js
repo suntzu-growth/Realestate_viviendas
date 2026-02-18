@@ -17,7 +17,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const V6_HTML = 'C:/Users/matya/Desktop/Vivla_front/data/rag/propiedades-suntzu-yucatan-v6.html';
+const V6_HTML = path.join(__dirname, 'propiedades-suntzu-yucatan-v7.html');
 const OUTPUT_DIR = path.join(__dirname, 'data', 'rag');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'propiedades-suntzu-yucatan.html');
 const VERCEL_BASE = 'https://realestate-viviendas.vercel.app';
@@ -40,9 +40,13 @@ function parseV6Articles(html) {
     const titleMatch = chunk.match(/<h2>(.*?)<\/h2>/);
     const title = titleMatch ? titleMatch[1].trim() : '';
 
-    // Slug (desde property-ref)
-    const refMatch = chunk.match(/class="property-ref"[^>]*>.*?Referencia:<\/strong>\s*([^\s<]+)/);
-    const slug = refMatch ? refMatch[1].trim() : '';
+    // Slug (desde property-ref o slugify del título)
+    // Para simplificar, si ya sincronizamos el v6/v7, el href del <a> tiene el slug real.
+    // O podemos volver a slugificar el título para estar seguros.
+    function slugify(text) {
+      return text.toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-');
+    }
+    const slug = slugify(title);
 
     // Imágenes (src de los img tags dentro de property-images)
     const imagesSection = chunk.match(/class="property-images">([\s\S]*?)<\/div>/);
